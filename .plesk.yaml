@@ -1,0 +1,9 @@
+runtime:
+  engine: nodejs
+  version: lts/*
+
+install:
+  - npm install
+  - npm run build
+
+start: npm run start
