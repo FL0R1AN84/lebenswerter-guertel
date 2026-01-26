@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { defineOptions } from 'vue'
-
 defineOptions({
   name: 'AnimatedHeart',
 })
