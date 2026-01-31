@@ -6,6 +6,6 @@ import WebsiteTitle from '../WebsiteTitle.vue'
 describe('WebsiteTitle', () => {
   it('renders properly', () => {
     const wrapper = mount(WebsiteTitle)
-    expect(wrapper.text()).toContain('lebenswerter-guertel')
+    expect(wrapper.text()).toContain('Lebenswerter Gürtel')
   })
 })
