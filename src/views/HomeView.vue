@@ -4,20 +4,30 @@ import WebsiteTitle from '../components/WebsiteTitle.vue'
 </script>
 
 <template>
-  <main class="under-construction">
+  <header class="bg-center">
     <IconAnimation />
     <WebsiteTitle />
-  </main>
+  </header>
+  <main class="main"></main>
 </template>
 
 <style scoped>
-.under-construction {
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: auto;
+  padding: 2rem 0;
+}
+
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   min-width: 100vw;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #009ee3 0%, #74b828 100%);
 }
 </style>
