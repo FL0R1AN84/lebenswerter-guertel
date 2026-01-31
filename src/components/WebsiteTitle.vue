@@ -15,11 +15,10 @@
   letter-spacing: 2px;
 }
 
-.subtitle {
-  font-size: 1.25rem;
-  color: rgba(24, 24, 24, 0.8);
-  margin-top: 0.5rem;
-  animation: fadeIn 1.5s ease-out;
+@media (prefers-color-scheme: dark) {
+  .website-title {
+    color: white;
+  }
 }
 
 @keyframes fadeInScale {
