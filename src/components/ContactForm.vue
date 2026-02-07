@@ -28,7 +28,6 @@ const submitted = reactive({ success: false })
 const validateForm = (): boolean => {
   errors.name = undefined
   errors.email = undefined
-  errors.phone = undefined
   errors.message = undefined
 
   if (!formData.name.trim()) {
@@ -37,21 +36,16 @@ const validateForm = (): boolean => {
   }
 
   if (!formData.email.trim()) {
-    errors.email = 'Email is required'
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
     errors.email =
       'Wir möchten sicherstellen, dass wir Sie erreichen können. Bitte geben Sie eine gültige E-Mail-Adresse ein.'
-  }
-
-  if (!formData.phone.trim()) {
-    errors.phone = 'Phone is required'
-  } else if (!/^[+\d\s\-()]+$/.test(formData.phone)) {
-    errors.phone =
-      'Wir möchten sicherstellen, dass wir Sie erreichen können. Bitte geben Sie eine gültige Telefonnummer ein.'
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    errors.email =
+      'Die E-Mail-Adresse scheint ungültig zu sein. Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut.'
   }
 
   if (!formData.message.trim()) {
-    errors.message = 'Message is required'
+    errors.message =
+      'Wir freuen uns darauf, von Ihnen zu hören! Bitte teilen Sie uns Ihr Anliegen mit, damit wir Ihnen bestmöglich weiterhelfen können.'
   } else if (formData.message.trim().length < 10) {
     errors.message =
       'Die Nachricht sollte mindestens 10 Zeichen lang sein, damit wir Ihre Anliegen besser verstehen können.'
@@ -65,7 +59,6 @@ const handleSubmit = () => {
     submitted.success = true
     formData.name = ''
     formData.email = ''
-    formData.phone = ''
     formData.message = ''
     setTimeout(() => {
       submitted.success = false
