@@ -38,7 +38,7 @@
 }
 
 .footer-link:focus {
-  outline: 2px solid #009ee3;
+  outline: 2px solid var(--color-blue);
   outline-offset: 2px;
   border-radius: 2px;
 }

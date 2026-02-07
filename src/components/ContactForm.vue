@@ -189,7 +189,7 @@ const handleSubmit = () => {
 
 .form-input:focus {
   outline: none;
-  border-color: #009ee3;
+  border-color: var(--color-blue);
   box-shadow: 0 0 0 3px rgba(0, 158, 227, 0.1);
 }
 
@@ -210,7 +210,7 @@ const handleSubmit = () => {
 .submit-button {
   width: 100%;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #009ee3 0%, #74b828 100%);
+  background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-green) 100%);
   color: white;
   border: none;
   border-radius: 4px;
@@ -225,7 +225,7 @@ const handleSubmit = () => {
 }
 
 .submit-button:focus {
-  outline: 3px solid #009ee3;
+  outline: 3px solid var(--color-blue);
   outline-offset: 2px;
 }
 
