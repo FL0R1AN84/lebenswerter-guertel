@@ -5,18 +5,13 @@ import WebsiteTitle from '@/components/WebsiteTitle.vue'
 
 <template>
   <router-link to="/">
-    <header class="bg-center">
-      <IconAnimation class="pl-4 md:pl-0" />
-      <WebsiteTitle class="pl-4 md:pl-0" />
+    <header
+      class="sticky top-0 z-50 flex items-center justify-center bg-white dark:bg-[#181818] shadow-md py-8 pl-4 md:pl-0"
+    >
+      <IconAnimation />
+      <WebsiteTitle />
     </header>
   </router-link>
 </template>
 
-<style scoped>
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
-}
-</style>
+<style scoped></style>

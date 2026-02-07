@@ -4,7 +4,9 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
 
 <template>
   <HeaderNavigation />
-  <main class="main">
+  <main
+    class="flex flex-col items-center justify-center bg-gradient-to-br from-[#009ee3] to-[#74b828]"
+  >
     <div>
       <h2 class="text-4xl font-bold text-white py-8 pl-2 lg:pl-0">
         Die Luxemburger ist wieder lebenswert.
@@ -20,12 +22,4 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
   </main>
 </template>
 
-<style scoped>
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #009ee3 0%, #74b828 100%);
-}
-</style>
+<style scoped></style>
