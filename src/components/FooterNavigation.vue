@@ -2,7 +2,9 @@
   <footer class="footer">
     <div class="footer-content">
       <nav class="footer-nav">
-        <router-link class="footer-link" to="/kontakt"> Impressum & Kontakt </router-link>
+        <router-link class="footer-link" rel="nofollow" to="/kontakt">
+          Impressum & Kontakt
+        </router-link>
       </nav>
     </div>
   </footer>
@@ -13,6 +15,7 @@
   padding: 1rem;
   text-align: center;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .footer-content {

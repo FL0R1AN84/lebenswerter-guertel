@@ -3,8 +3,15 @@ import ContactForm from '../components/ContactForm.vue'
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
 
 const decryptEmail = () => {
-  const encoded = 'a29udGFrdEBsZWJlbnN3ZXJ0ZXItZ3VlcnRlbC5rb2Vsbg=='
+  const encoded = 'a29udGFrdEBsZWJlbnN3ZXJ0ZXItZ3VlcnRlbC5rb2Vlbg=='
   return atob(encoded)
+}
+
+const copyEmailToClipboard = () => {
+  const email = decryptEmail()
+  navigator.clipboard.writeText(email).then(() => {
+    alert('Email copied to clipboard!')
+  })
 }
 </script>
 
@@ -26,7 +33,10 @@ const decryptEmail = () => {
       <section class="imprint-section shadow-md dark:shadow-sm">
         <h2>Kontakt</h2>
         <p>
-          Email: <span class="email-obfuscated">{{ decryptEmail() }}</span>
+          E-Mail:
+          <a class="email-obfuscated" rel="nofollow" @click="copyEmailToClipboard">
+            {{ decryptEmail() }}
+          </a>
         </p>
       </section>
 
@@ -42,7 +52,7 @@ const decryptEmail = () => {
 <style scoped>
 .imprint-container {
   min-height: calc(100vh - 200px);
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .imprint-content {

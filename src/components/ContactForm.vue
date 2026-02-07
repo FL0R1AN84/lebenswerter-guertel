@@ -32,25 +32,29 @@ const validateForm = (): boolean => {
   errors.message = undefined
 
   if (!formData.name.trim()) {
-    errors.name = 'Name is required'
+    errors.name =
+      'Wir würden gerne wissen, wie wir Sie ansprechen dürfen. Bitte geben Sie Ihren Namen ein.'
   }
 
   if (!formData.email.trim()) {
     errors.email = 'Email is required'
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-    errors.email = 'Invalid email format'
+    errors.email =
+      'Wir möchten sicherstellen, dass wir Sie erreichen können. Bitte geben Sie eine gültige E-Mail-Adresse ein.'
   }
 
   if (!formData.phone.trim()) {
     errors.phone = 'Phone is required'
   } else if (!/^[+\d\s\-()]+$/.test(formData.phone)) {
-    errors.phone = 'Invalid phone format'
+    errors.phone =
+      'Wir möchten sicherstellen, dass wir Sie erreichen können. Bitte geben Sie eine gültige Telefonnummer ein.'
   }
 
   if (!formData.message.trim()) {
     errors.message = 'Message is required'
   } else if (formData.message.trim().length < 10) {
-    errors.message = 'Message must be at least 10 characters'
+    errors.message =
+      'Die Nachricht sollte mindestens 10 Zeichen lang sein, damit wir Ihre Anliegen besser verstehen können.'
   }
 
   return Object.keys(errors).length === 0
@@ -109,14 +113,13 @@ const handleSubmit = () => {
     </div>
 
     <div class="form-group">
-      <label class="form-label" for="phone">Phone <span class="required">*</span></label>
+      <label class="form-label" for="phone">Phone</label>
       <input
         id="phone"
         v-model="formData.phone"
         :aria-describedby="errors.phone ? 'phone-error' : undefined"
         :aria-invalid="!!errors.phone"
         class="form-input"
-        required
         type="tel"
       />
       <p v-if="errors.phone" id="phone-error" class="error-message">
@@ -149,14 +152,12 @@ const handleSubmit = () => {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
-  background: #f9f9f9;
   border-radius: 8px;
 }
 
 .success-message {
   margin-bottom: 1rem;
   padding: 1rem;
-  background: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
   border-radius: 4px;
@@ -211,7 +212,6 @@ const handleSubmit = () => {
   width: 100%;
   padding: 0.75rem 1.5rem;
   background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-green) 100%);
-  color: white;
   border: none;
   border-radius: 4px;
   font-size: 1rem;
