@@ -20,7 +20,6 @@ const decryptEmail = () => {
           <strong>IG Lebenswerter Gürtel</strong><br />
           Raderthalgürtel 6D<br />
           50968 Köln<br />
-          Germany
         </p>
       </section>
 
@@ -54,7 +53,7 @@ const decryptEmail = () => {
 .imprint-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #009ee3;
+  color: var(--color-blue);
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -62,13 +61,13 @@ const decryptEmail = () => {
 .imprint-section {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  border-left: 4px solid #74b828;
+  border-left: 4px solid var(--color-green);
   border-radius: 4px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .imprint-section h2 {
-  color: #009ee3;
+  color: var(--color-blue);
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }

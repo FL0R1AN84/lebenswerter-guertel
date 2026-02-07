@@ -10,7 +10,7 @@
 
 <style scoped>
 .footer {
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   margin-top: 1rem;
 }
@@ -27,14 +27,14 @@
 }
 
 .footer-link {
-  color: #74b828;
+  color: var(--color-green);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .footer-link:hover {
-  color: #009ee3;
+  color: var(--color-blue);
 }
 
 .footer-link:focus {

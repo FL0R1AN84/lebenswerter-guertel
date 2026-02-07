@@ -5,7 +5,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
 <template>
   <HeaderNavigation />
   <main
-    class="flex flex-col items-center justify-center bg-gradient-to-br from-[#009ee3] to-[#74b828]"
+    class="flex flex-col items-center justify-center bg-linear-to-br from-[#009ee3] to-[#74b828]"
   >
     <div>
       <h2 class="text-4xl font-bold text-white py-8 pl-2 lg:pl-0">
