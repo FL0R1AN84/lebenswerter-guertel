@@ -8,7 +8,7 @@
 .website-title {
   font-size: clamp(1.5rem, 8vw, 3.5rem);
   font-weight: 700;
-  color: #181818;
+  color: var(--color-dark);
   margin: 0;
   animation: fadeInScale 1s ease-out;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);

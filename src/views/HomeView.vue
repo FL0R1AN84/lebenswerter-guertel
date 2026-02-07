@@ -1,14 +1,12 @@
 <script lang="ts" setup>
-import IconAnimation from '../components/IconAnimation.vue'
-import WebsiteTitle from '../components/WebsiteTitle.vue'
+import HeaderNavigation from '@/components/HeaderNavigation.vue'
 </script>
 
 <template>
-  <header class="bg-center">
-    <IconAnimation class="pl-4 md:pl-0" />
-    <WebsiteTitle class="pl-4 md:pl-0" />
-  </header>
-  <main class="main">
+  <HeaderNavigation />
+  <main
+    class="flex flex-col items-center justify-center bg-linear-to-br from-[#009ee3] to-[#74b828]"
+  >
     <div>
       <h2 class="text-4xl font-bold text-white py-8 pl-2 lg:pl-0">
         Die Luxemburger ist wieder lebenswert.
@@ -24,19 +22,4 @@ import WebsiteTitle from '../components/WebsiteTitle.vue'
   </main>
 </template>
 
-<style scoped>
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #009ee3 0%, #74b828 100%);
-}
-</style>
+<style scoped></style>
