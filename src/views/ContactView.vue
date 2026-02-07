@@ -14,7 +14,7 @@ const decryptEmail = () => {
     <section class="imprint-content">
       <h1 class="imprint-title">Impressum & Kontakt</h1>
 
-      <section class="imprint-section">
+      <section class="imprint-section shadow-md dark:shadow-sm">
         <h2>Verantwortlich</h2>
         <p>
           <strong>IG Lebenswerter Gürtel</strong><br />
@@ -23,14 +23,14 @@ const decryptEmail = () => {
         </p>
       </section>
 
-      <section class="imprint-section">
+      <section class="imprint-section shadow-md dark:shadow-sm">
         <h2>Kontakt</h2>
         <p>
           Email: <span class="email-obfuscated">{{ decryptEmail() }}</span>
         </p>
       </section>
 
-      <section class="imprint-section">
+      <section class="imprint-section shadow-md dark:shadow-sm">
         <h2>Kontaktformular</h2>
         <p>Oder nutzen Sie das folgende Kontaktformular:</p>
         <ContactForm />
@@ -63,7 +63,6 @@ const decryptEmail = () => {
   padding: 1.5rem;
   border-left: 4px solid var(--color-green);
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .imprint-section h2 {
