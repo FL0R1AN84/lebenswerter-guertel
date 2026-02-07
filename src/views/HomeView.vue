@@ -1,13 +1,9 @@
 <script lang="ts" setup>
-import IconAnimation from '../components/IconAnimation.vue'
-import WebsiteTitle from '../components/WebsiteTitle.vue'
+import HeaderNavigation from '@/components/HeaderNavigation.vue'
 </script>
 
 <template>
-  <header class="bg-center">
-    <IconAnimation class="pl-4 md:pl-0" />
-    <WebsiteTitle class="pl-4 md:pl-0" />
-  </header>
+  <HeaderNavigation />
   <main class="main">
     <div>
       <h2 class="text-4xl font-bold text-white py-8 pl-2 lg:pl-0">
@@ -25,13 +21,6 @@ import WebsiteTitle from '../components/WebsiteTitle.vue'
 </template>
 
 <style scoped>
-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem 0;
-}
-
 .main {
   display: flex;
   flex-direction: column;
