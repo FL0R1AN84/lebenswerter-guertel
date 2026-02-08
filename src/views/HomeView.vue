@@ -41,8 +41,8 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           />
           <p>
             Die Europäische Umweltagentur schätzt, dass jährlich 12.000 vorzeitige Todesfälle und
-            rund 50.000 Herz-Kreislauf-Erkran- kungen durch Lärm verursacht werden. Eine
-            Lärmreduktion an der Luxemburger Straße ist durch Tempo 30 schnell und günstig möglich.
+            rund 50.000 Herz-Kreislauf-Erkrankungen durch Lärm verursacht werden. Eine Lärmreduktion
+            an der Luxemburger Straße ist durch Tempo 30 schnell und günstig möglich.
           </p>
         </section>
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
