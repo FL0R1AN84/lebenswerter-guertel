@@ -206,7 +206,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
 <style scoped>
 .home-section {
   margin-top: 2rem;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   border-left: 4px solid var(--color-blue);
   border-radius: 4px;
 }
@@ -214,5 +214,11 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
 .home-section p {
   line-height: 1.6;
   margin: 1rem 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.home-section a {
+  word-break: break-all;
 }
 </style>
