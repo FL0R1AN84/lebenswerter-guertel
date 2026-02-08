@@ -27,7 +27,7 @@ defineOptions({
 .heart {
   width: 100%;
   height: 100%;
-  color: #ff1493;
+  color: var(--color-pink);
   animation: heartbeat 1.2s ease-in-out infinite;
 }
 

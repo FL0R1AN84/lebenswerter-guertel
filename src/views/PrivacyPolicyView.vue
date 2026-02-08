@@ -9,7 +9,7 @@ const decryptEmail = () => {
 const copyEmailToClipboard = () => {
   const email = decryptEmail()
   navigator.clipboard.writeText(email).then(() => {
-    alert('Email copied to clipboard!')
+    alert('Die E-Mail-Adresse wurde in die Zwischenablage kopiert')
   })
 }
 </script>
@@ -21,7 +21,7 @@ const copyEmailToClipboard = () => {
       <h1 class="privacy-title">Datenschutzerklärung</h1>
       <p class="privacy-date">Stand: 8. Februar 2026</p>
 
-      <section class="privacy-section shadow-md dark:shadow-sm">
+      <section class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
         <h2>Inhaltsübersicht</h2>
         <ul class="index">
           <li><a class="index-link" href="#m3">Verantwortlicher</a></li>
@@ -34,7 +34,7 @@ const copyEmailToClipboard = () => {
         </ul>
       </section>
 
-      <section id="m3" class="privacy-section shadow-md dark:shadow-sm">
+      <section id="m3" class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
         <h2>Verantwortlicher</h2>
         <p>
           <strong>IG Lebenswerter Gürtel</strong><br />
@@ -42,14 +42,31 @@ const copyEmailToClipboard = () => {
           50968 Köln
         </p>
         <p>
-          E-Mail-Adresse:
+          E-Mail:
           <a class="email-obfuscated" rel="nofollow" @click="copyEmailToClipboard">
             {{ decryptEmail() }}
+            <svg
+              class="size-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
           </a>
         </p>
       </section>
 
-      <section id="mOverview" class="privacy-section shadow-md dark:shadow-sm">
+      <section
+        id="mOverview"
+        class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50"
+      >
         <h2>Übersicht der Verarbeitungen</h2>
         <p>
           Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer
@@ -81,7 +98,10 @@ const copyEmailToClipboard = () => {
         </ul>
       </section>
 
-      <section id="m2427" class="privacy-section shadow-md dark:shadow-sm">
+      <section
+        id="m2427"
+        class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50"
+      >
         <h2>Maßgebliche Rechtsgrundlagen</h2>
         <p>
           <strong>Maßgebliche Rechtsgrundlagen nach der DSGVO: </strong>Im Folgenden erhalten Sie
@@ -137,7 +157,10 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section id="m225" class="privacy-section shadow-md dark:shadow-sm">
+      <section
+        id="m225"
+        class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50"
+      >
         <h2>Bereitstellung des Onlineangebots und Webhosting</h2>
         <p>
           Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen
@@ -209,7 +232,10 @@ const copyEmailToClipboard = () => {
         </ul>
       </section>
 
-      <section id="m182" class="privacy-section shadow-md dark:shadow-sm">
+      <section
+        id="m182"
+        class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50"
+      >
         <h2>Kontakt- und Anfrageverwaltung</h2>
         <p>
           Bei der Kontaktaufnahme mit uns (z. B. per Post, Kontaktformular, E-Mail, Telefon oder via
@@ -277,6 +303,15 @@ const copyEmailToClipboard = () => {
 </template>
 
 <style scoped>
+.email-obfuscated {
+  font-family: monospace;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .privacy-container {
   min-height: calc(100vh - 200px);
   padding: 1rem;
@@ -298,7 +333,6 @@ const copyEmailToClipboard = () => {
 .privacy-date {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--color-text-secondary);
 }
 
 .privacy-section {
@@ -360,10 +394,6 @@ const copyEmailToClipboard = () => {
   border-top: 1px solid var(--color-border);
   text-align: center;
   font-size: 0.9rem;
-}
-
-.seal a {
-  color: var(--color-text-secondary);
 }
 
 @media (max-width: 768px) {
