@@ -3,7 +3,7 @@ import ContactForm from '../components/ContactForm.vue'
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
 
 const decryptEmail = () => {
-  const encoded = 'a29udGFrdEBsZWJlbnN3ZXJ0ZXItZ3VlcnRlbC5rb2Vlbg=='
+  const encoded = 'a29udGFrdEBsZWJlbnN3ZXJ0ZXItZ3VlcnRlbC5rb2Vsbg=='
   return atob(encoded)
 }
 

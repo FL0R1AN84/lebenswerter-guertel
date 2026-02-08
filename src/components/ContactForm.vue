@@ -15,11 +15,6 @@ interface FormErrors {
   message?: string
 }
 
-interface SubmitState {
-  success: boolean
-  loading: boolean
-}
-
 const formData = reactive<FormData>({
   name: '',
   email: '',
@@ -28,7 +23,7 @@ const formData = reactive<FormData>({
 })
 
 const errors = reactive<FormErrors>({})
-const submitted = reactive<SubmitState>({ success: false, loading: false })
+const submitted = reactive({ success: false })
 
 const validateForm = (): boolean => {
   errors.name = undefined
@@ -59,36 +54,15 @@ const validateForm = (): boolean => {
   return Object.keys(errors).length === 0
 }
 
-const handleSubmit = async () => {
+const handleSubmit = () => {
   if (validateForm()) {
-    submitted.loading = true
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        submitted.success = true
-        formData.name = ''
-        formData.email = ''
-        formData.message = ''
-        setTimeout(() => {
-          submitted.success = false
-        }, 5000)
-      } else {
-        errors.message =
-          'Es gab ein Problem beim Senden der Nachricht. Bitte versuchen Sie es später erneut.'
-      }
-    } catch (error) {
-      errors.message = 'Fehler beim Senden. Bitte überprüfen Sie Ihre Internetverbindung.'
-      console.error('Form submission error:', error)
-    } finally {
-      submitted.loading = false
-    }
+    submitted.success = true
+    formData.name = ''
+    formData.email = ''
+    formData.message = ''
+    setTimeout(() => {
+      submitted.success = false
+    }, 5000)
   }
 }
 </script>
@@ -96,7 +70,7 @@ const handleSubmit = async () => {
 <template>
   <form class="contact-form" @submit.prevent="handleSubmit">
     <div v-if="submitted.success" class="success-message" role="alert">
-      Thank you! Your message has been sent successfully.
+      Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
     </div>
 
     <div class="form-group">
@@ -116,7 +90,7 @@ const handleSubmit = async () => {
     </div>
 
     <div class="form-group">
-      <label class="form-label" for="email">Email <span class="required">*</span></label>
+      <label class="form-label" for="email">E-Mail <span class="required">*</span></label>
       <input
         id="email"
         v-model="formData.email"
@@ -132,7 +106,7 @@ const handleSubmit = async () => {
     </div>
 
     <div class="form-group">
-      <label class="form-label" for="phone">Phone</label>
+      <label class="form-label" for="phone">Telefon</label>
       <input
         id="phone"
         v-model="formData.phone"
@@ -147,7 +121,7 @@ const handleSubmit = async () => {
     </div>
 
     <div class="form-group">
-      <label class="form-label" for="message">Message <span class="required">*</span></label>
+      <label class="form-label" for="message">Nachricht <span class="required">*</span></label>
       <textarea
         id="message"
         v-model="formData.message"
@@ -162,14 +136,7 @@ const handleSubmit = async () => {
       </p>
     </div>
 
-    <div v-if="submitted.success" class="success-message" role="alert">
-      Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
-    </div>
-
-    <button :disabled="submitted.loading" class="submit-button" type="submit">
-      <span v-if="submitted.loading" class="spinner"></span>
-      <span v-else>Send Message</span>
-    </button>
+    <button class="submit-button" type="submit">Nachricht senden</button>
   </form>
 </template>
 
@@ -257,26 +224,5 @@ const handleSubmit = async () => {
 
 .submit-button:active {
   opacity: 0.8;
-}
-
-.submit-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-.spinner {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top-color: white;
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 </style>

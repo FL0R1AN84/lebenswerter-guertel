@@ -5,6 +5,9 @@
         <router-link class="footer-link" rel="nofollow" to="/kontakt">
           Impressum & Kontakt
         </router-link>
+        <router-link class="footer-link" rel="nofollow" to="/datenschutz">
+          Datenschutz
+        </router-link>
       </nav>
     </div>
   </footer>
