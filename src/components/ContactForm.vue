@@ -70,7 +70,7 @@ const handleSubmit = () => {
 <template>
   <form class="contact-form" @submit.prevent="handleSubmit">
     <div v-if="submitted.success" class="success-message" role="alert">
-      Thank you! Your message has been sent successfully.
+      Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
     </div>
 
     <div class="form-group">
