@@ -41,8 +41,12 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           />
           <p>
             Die Europäische Umweltagentur schätzt, dass jährlich 12.000 vorzeitige Todesfälle und
-            rund 50.000 Herz-Kreislauf-Erkrankungen durch Lärm verursacht werden. Eine Lärmreduktion
-            an der Luxemburger Straße ist durch Tempo 30 schnell und günstig möglich.
+            rund 50.000 Herz-Kreislauf-Erkrankungen durch Lärm verursacht werden.<sup
+              ><span class="text-(--color-pink) font-bold">1</span></sup
+            >
+
+            Eine Lärmreduktion an der Luxemburger Straße ist durch Tempo 30 schnell und günstig
+            möglich.
           </p>
         </section>
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
@@ -62,7 +66,9 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           <p>
             Tempo 30 sorgt für mehr Sicherheit. Nach der Einführung von Tempo 30 an den Kölner
             Ringen ging die Anzahl an Unfällen mit Personenschaden um 28 % zurück. Die Unfälle mit
-            schwer- verletzten Personen sanken um 47 %.
+            schwer- verletzten Personen sanken um 47 %.<sup
+              ><span class="text-(--color-pink) font-bold">2</span></sup
+            >
           </p>
         </section>
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
@@ -131,6 +137,66 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
             class="py-2"
             src="/05.webp"
           />
+        </section>
+        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+          <h2 class="text-2xl font-bold text-(--color-pink) py-4 pl-2 lg:pl-0">Quellen:</h2>
+          <p>
+            <span class="text-(--color-pink) font-bold">1</span> European Environment Agency (EEA)
+            <a
+              class="text-(--color-blue) hover:underline"
+              href="https://www.eea.europa.eu/de/highlights/die-zahl-der-europaeer-die"
+              rel="noopener noreferrer"
+              target="_blank"
+              >https://www.eea.europa.eu/de/highlights/die-zahl-der-europaeer-die</a
+            >
+          </p>
+          <p>
+            <span class="text-(--color-pink) font-bold">2</span> Deutscher Verkehrssicherheitsrat
+            (DVR), Beispielsammlung Innenstadtringe, Köln
+            <a
+              class="text-(--color-blue) hover:underline"
+              href="https://www.dvr.de/themen/verkehrsinfrastruktur/beispielsammlung-gute-strassen-in-stadt-und-dorf/koeln-innenstadtringe"
+              rel="noopener noreferrer"
+              target="_blank"
+              >https://www.dvr.de/themen/verkehrsinfrastruktur/beispielsammlung-gute-strassen-in-stadt-und-dorf/koeln-innenstadtringe</a
+            >
+          </p>
+          <p>
+            <span class="text-(--color-pink) font-bold">3</span> OECD/ECMT Transport Research
+            Centre: Speed Management report, Paris 2006
+          </p>
+          <p>
+            <span class="text-(--color-pink) font-bold">4</span> Peter Höfflin, Die Qualitäten
+            urbaner Räume und deren Bedeutung für die Entwicklung von Kindern, 2019
+            <a
+              class="text-(--color-blue) hover:underline"
+              href="https://www.vhw.de/fileadmin/user_upload/08_publikationen/verbandszeitschrift/FWS/2019/1_2019/FWS_1_19_Hoefflin.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+              >https://www.vhw.de/fileadmin/user_upload/08_publikationen/verbandszeitschrift/FWS/2019/1_2019/FWS_1_19_Hoefflin.pdf</a
+            >
+          </p>
+          <p>
+            <span class="text-(--color-pink) font-bold">5</span> Umweltbundesamt (UBA) (2016).
+            „Wirkungen von Tempo 30 an Hauptverkehrsstraßen", Seite 14f
+            <a
+              class="text-(--color-blue) hover:underline"
+              href="https://www.umweltbundesamt.de/sites/default/files/medien/2546/publikationen/wirkungen_von_tempo_30_an_hauptstrassen.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+              >https://www.umweltbundesamt.de/sites/default/files/medien/2546/publikationen/wirkungen_von_tempo_30_an_hauptstrassen.pdf</a
+            >
+          </p>
+          <p>
+            <span>Texte und Bilder sind aus dem Flyer der IG Lebenswerte Lux </span>
+            <a
+              class="text-(--color-blue) hover:underline"
+              href="https://lebenswerte-lux.koeln/.cm4all/uproc.php/0/Flyer_Tempo30_IGLebenswerteLux.pdf"
+              rel="noopener noreferrer"
+              target="_blank"
+              >https://lebenswerte-lux.koeln/.cm4all/uproc.php/0/Flyer_Tempo30_IGLebenswerteLux.pdf</a
+            >
+          </p>
         </section>
       </section>
     </div>
