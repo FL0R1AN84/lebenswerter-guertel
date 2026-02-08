@@ -28,7 +28,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
           <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
             <span
-              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold"
+              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
               >1</span
             >
             <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
@@ -36,14 +36,101 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
             </span>
           </h2>
           <img
-            alt="Bild mit der Aufschrift: Ab sofort Tempo 30 auf der Lux. Weniger Lärm, bessere Luft, mehr Sicherheit für alle Wir bedanken uns für die große Unterstützung aus den Veedeln"
+            alt="Bild mit 2 Autos, eines mit Tempo 50 und eines mit Tempo 30. Das Auto mit Tempo 50 hat Schallwellen die weiter reichen als das Auto mit Tempo 30."
             src="/01.webp"
           />
           <p>
             Die Europäische Umweltagentur schätzt, dass jährlich 12.000 vorzeitige Todesfälle und
-            rund 50.000 Herz-Kreislauf-Erkran- kungen durch Lärm verursacht werden.1 Eine
+            rund 50.000 Herz-Kreislauf-Erkran- kungen durch Lärm verursacht werden. Eine
             Lärmreduktion an der Luxemburger Straße ist durch Tempo 30 schnell und günstig möglich.
           </p>
+        </section>
+        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+            <span
+              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              >2</span
+            >
+            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+              Der Anhalteweg durch Tempo 30 reduziert sich um die Hälfte.
+            </span>
+          </h2>
+          <img
+            alt="Bild mit den Anhaltewegen beim Bremsen bei Tempo 30 sind es 13,3 Meter und bei Tempo 50 sind es 27,7 Meter."
+            src="/02.webp"
+          />
+          <p>
+            Tempo 30 sorgt für mehr Sicherheit. Nach der Einführung von Tempo 30 an den Kölner
+            Ringen ging die Anzahl an Unfällen mit Personenschaden um 28 % zurück. Die Unfälle mit
+            schwer- verletzten Personen sanken um 47 %.
+          </p>
+        </section>
+        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+            <span
+              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              >3</span
+            >
+            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+              Bei Tempo 30 ist die Überlebenschance von Zufußgehenden bei einer Kollision durch ein
+              Auto viermal höher.
+            </span>
+          </h2>
+          <img
+            alt="Bild mit dem Hinweis bei Tempo 30: 9 von 10 überleben eine Kollision bei 30 km/h und bei Tempo 50: nur 2 von 10 überlebt eine Kollision bei 50 km/h"
+            class="py-2"
+            src="/04.webp"
+          />
+        </section>
+        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+            <span
+              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              >4</span
+            >
+            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+              Tempo 30 erhöht die Aufenthaltsqualität und stärkt die Nachbarschaft.
+            </span>
+          </h2>
+          <p>
+            Weniger Lärm, bessere Luft, mehr Verkehrssicherheit: Tempo 30 sorgt dafür, dass wir uns
+            lieber draußen aufhalten. Sichere Wege zu Fuß und mit dem Rad zurückzulegen und auf
+            schönen Außenterrassen der Gastronomie zu sitzen, stärkt die Nachbarschaft. Dies sorgt
+            für ein belebteres Umfeld, wovon gerade auch der Einzelhandel und Gewerbe- treibende
+            profitieren.
+          </p>
+          <img
+            alt="Bild mit der Information das die Zeit die Kinder (5 bis 7 Jahre) ohne Aufsicht im Umfeld des Wohnorts draußen spielen, bei Tempo 50 (Durchgangsverkehr) sind es 32 Minuten, bei Tempo 30 (Durchgangsverkehr) sind es 53 Minuten und bei Tempo 30 (Verkehrsberuhigt) sind es 66 Minuten."
+            class="py-2"
+            src="/04.webp"
+          />
+        </section>
+        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+            <span
+              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              >5</span
+            >
+            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+              Tempo 30 reduziert die Luftschadstoffbelastung, wenn die Qualität des Verkehrsflusses
+              beibehalten oder verbessert wird.
+            </span>
+          </h2>
+          <p>
+            Der Gürtel ist nach wie vor stark luftverschmutzt. Erst seit Kurzem werden die
+            Grenzwerte der Luftreinhaltung auf der Luxemburger Straße knapp eingehalten.
+            Voraussichtlich werden auf EU-Ebene die Grenzwerte im Jahr 2030 erheblich verschärft.
+            Eine Strategie, wie diese neuen Werte eingehalten werden sollen, fehlt bislang. Tempo 30
+            trägt auch zu einer besseren Luftreinhaltung bei, wie beispielsweise ein Reallabor im
+            Jahr 2021 in der Essener Alfredstraße gezeigt hat. Die Ampeln der Lux wurden 2019
+            modernisiert, weshalb diese auf optimalen Verkehrsfluß für Tempo 30 umprogrammiert
+            werden können. Die Stadtbahn kann weiterhin schneller fahren.
+          </p>
+          <img
+            alt="Bild mit der Information der Auswertungen an drei Berliner Hauptverkehrsstraßen: Tempo 30 sorgt für bessere Luft."
+            class="py-2"
+            src="/05.webp"
+          />
         </section>
       </section>
     </div>
