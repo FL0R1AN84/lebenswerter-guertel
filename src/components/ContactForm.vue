@@ -90,7 +90,7 @@ const handleSubmit = () => {
     </div>
 
     <div class="form-group">
-      <label class="form-label" for="email">Email <span class="required">*</span></label>
+      <label class="form-label" for="email">E-Mail <span class="required">*</span></label>
       <input
         id="email"
         v-model="formData.email"
@@ -106,7 +106,7 @@ const handleSubmit = () => {
     </div>
 
     <div class="form-group">
-      <label class="form-label" for="phone">Phone</label>
+      <label class="form-label" for="phone">Telefon</label>
       <input
         id="phone"
         v-model="formData.phone"
@@ -121,7 +121,7 @@ const handleSubmit = () => {
     </div>
 
     <div class="form-group">
-      <label class="form-label" for="message">Message <span class="required">*</span></label>
+      <label class="form-label" for="message">Nachricht <span class="required">*</span></label>
       <textarea
         id="message"
         v-model="formData.message"
@@ -136,7 +136,7 @@ const handleSubmit = () => {
       </p>
     </div>
 
-    <button class="submit-button" type="submit">Send Message</button>
+    <button class="submit-button" type="submit">Nachricht senden</button>
   </form>
 </template>
 
