@@ -321,7 +321,6 @@ const copyEmailToClipboard = () => {
 .privacy-date {
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--color-text-secondary);
 }
 
 .privacy-section {
@@ -383,10 +382,6 @@ const copyEmailToClipboard = () => {
   border-top: 1px solid var(--color-border);
   text-align: center;
   font-size: 0.9rem;
-}
-
-.seal a {
-  color: var(--color-text-secondary);
 }
 
 @media (max-width: 768px) {
