@@ -8,59 +8,66 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
     <div
       class="flex flex-col items-center justify-center bg-linear-to-br from-(--color-blue) to-(--color-green)"
     >
-      <h2 class="text-4xl font-bold text-white py-8 pl-2 lg:pl-0">
+      <h2 class="text-2xl md:text-4xl font-bold text-white py-8 px-2 lg:px-0 text-center">
         Die Luxemburger ist wieder lebenswert.
       </h2>
       <img
         alt="Bild mit der Aufschrift: Ab sofort Tempo 30 auf der Lux. Weniger Lärm, bessere Luft, mehr Sicherheit für alle Wir bedanken uns für die große Unterstützung aus den Veedeln"
+        class="w-full max-w-295 px-4 lg:px-0"
         src="/IGLux_Kinowerbung.webp"
       />
-      <h3 class="text-4xl font-bold text-white py-8 pl-2 lg:pl-0">
+      <h3 class="text-2xl md:text-4xl font-bold text-white py-8 px-2 lg:px-0 text-center">
         Jetzt machen wir den Gürtel wieder lebenswert!
       </h3>
     </div>
-    <div class="flex flex-col items-center justify-center py-8 pl-2 lg:pl-0">
-      <h1 class="flex items-center gap-4 text-(--color-pink)">
-        <span class="text-8xl font-bold">5</span>
-        <span class="text-4xl leading-tight"> gute Gründe<br />für Tempo 30 </span>
+    <div class="flex flex-col items-center justify-center py-8 px-2 lg:px-0">
+      <h1
+        class="flex flex-col sm:flex-row items-center gap-4 text-(--color-pink) text-center sm:text-left"
+      >
+        <span class="text-6xl md:text-8xl font-bold">5</span>
+        <span class="text-3xl md:text-4xl leading-tight"> gute Gründe<br />für Tempo 30 </span>
       </h1>
-      <section class="max-w-295 flex flex-col items-center">
+      <section class="w-full max-w-295 flex flex-col items-center px-2 lg:px-0">
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
-          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+          <h2
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
+          >
             <span
-              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >1</span
             >
-            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+            <span class="text-xl sm:text-2xl leading-tight">
               Tempo 30 senkt den wahrgenommenen Verkehrslärm gegen über Tempo 50 um die Hälfte.
             </span>
           </h2>
           <img
             alt="Bild mit 2 Autos, eines mit Tempo 50 und eines mit Tempo 30. Das Auto mit Tempo 50 hat Schallwellen die weiter reichen als das Auto mit Tempo 30."
+            class="w-full h-auto"
             src="/01.webp"
           />
           <p>
             Die Europäische Umweltagentur schätzt, dass jährlich 12.000 vorzeitige Todesfälle und
             rund 50.000 Herz-Kreislauf-Erkrankungen durch Lärm verursacht werden.<sup
-              ><span class="text-(--color-pink) font-bold">1</span></sup
-            >
-
-            Eine Lärmreduktion an der Luxemburger Straße ist durch Tempo 30 schnell und günstig
+              ><span class="text-(--color-pink) font-bold">1 </span></sup
+            >Eine Lärmreduktion an der Luxemburger Straße ist durch Tempo 30 schnell und günstig
             möglich.
           </p>
         </section>
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
-          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+          <h2
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
+          >
             <span
-              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >2</span
             >
-            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+            <span class="text-xl sm:text-2xl leading-tight">
               Der Anhalteweg durch Tempo 30 reduziert sich um die Hälfte.
             </span>
           </h2>
           <img
             alt="Bild mit den Anhaltewegen beim Bremsen bei Tempo 30 sind es 13,3 Meter und bei Tempo 50 sind es 27,7 Meter."
+            class="w-full h-auto"
             src="/02.webp"
           />
           <p>
@@ -72,29 +79,33 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           </p>
         </section>
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
-          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+          <h2
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
+          >
             <span
-              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >3</span
             >
-            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+            <span class="text-xl sm:text-2xl leading-tight">
               Bei Tempo 30 ist die Überlebenschance von Zufußgehenden bei einer Kollision durch ein
               Auto viermal höher.
             </span>
           </h2>
           <img
             alt="Bild mit dem Hinweis bei Tempo 30: 9 von 10 überleben eine Kollision bei 30 km/h und bei Tempo 50: nur 2 von 10 überlebt eine Kollision bei 50 km/h"
-            class="py-2"
+            class="w-full h-auto py-2"
             src="/04.webp"
           />
         </section>
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
-          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+          <h2
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
+          >
             <span
-              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >4</span
             >
-            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+            <span class="text-xl sm:text-2xl leading-tight">
               Tempo 30 erhöht die Aufenthaltsqualität und stärkt die Nachbarschaft.
             </span>
           </h2>
@@ -107,17 +118,19 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           </p>
           <img
             alt="Bild mit der Information das die Zeit die Kinder (5 bis 7 Jahre) ohne Aufsicht im Umfeld des Wohnorts draußen spielen, bei Tempo 50 (Durchgangsverkehr) sind es 32 Minuten, bei Tempo 30 (Durchgangsverkehr) sind es 53 Minuten und bei Tempo 30 (Verkehrsberuhigt) sind es 66 Minuten."
-            class="py-2"
+            class="w-full h-auto py-2"
             src="/04.webp"
           />
         </section>
         <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
-          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+          <h2
+            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
+          >
             <span
-              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold p-2 lg:p-5"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >5</span
             >
-            <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
+            <span class="text-xl sm:text-2xl leading-tight">
               Tempo 30 reduziert die Luftschadstoffbelastung, wenn die Qualität des Verkehrsflusses
               beibehalten oder verbessert wird.
             </span>
@@ -134,7 +147,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           </p>
           <img
             alt="Bild mit der Information der Auswertungen an drei Berliner Hauptverkehrsstraßen: Tempo 30 sorgt für bessere Luft."
-            class="py-2"
+            class="w-full h-auto py-2"
             src="/05.webp"
           />
         </section>
@@ -206,7 +219,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
 <style scoped>
 .home-section {
   margin-top: 2rem;
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   border-left: 4px solid var(--color-blue);
   border-radius: 4px;
 }
@@ -214,5 +227,11 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
 .home-section p {
   line-height: 1.6;
   margin: 1rem 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.home-section a {
+  word-break: break-all;
 }
 </style>
