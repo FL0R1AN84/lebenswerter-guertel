@@ -21,7 +21,7 @@ const copyEmailToClipboard = () => {
     <section class="imprint-content">
       <h1 class="imprint-title">Impressum & Kontakt</h1>
 
-      <section class="imprint-section shadow-md dark:shadow-sm">
+      <section class="imprint-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
         <h2>Verantwortlich</h2>
         <p>
           <strong>IG Lebenswerter Gürtel</strong><br />
@@ -30,7 +30,7 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section class="imprint-section shadow-md dark:shadow-sm">
+      <section class="imprint-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
         <h2>Kontakt</h2>
         <p>
           E-Mail:
@@ -54,7 +54,7 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section class="imprint-section shadow-md dark:shadow-sm">
+      <section class="imprint-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
         <h2>Kontaktformular</h2>
         <p>Oder nutzen Sie das folgende Kontaktformular:</p>
         <ContactForm />

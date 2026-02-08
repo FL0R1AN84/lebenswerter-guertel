@@ -25,9 +25,12 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
         <span class="text-4xl leading-tight"> gute Gründe<br />für Tempo 30 </span>
       </h1>
       <section class="max-w-295 flex flex-col items-center">
-        <section class="home-section shadow-md dark:shadow-sm">
-          <h2 class="flex items-center gap-4 text-(--color-pink)">
-            <span class="text-4xl font-bold">1</span>
+        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+          <h2 class="flex items-center gap-4 text-(--color-pink) py-4 pl-2 lg:pl-0">
+            <span
+              class="flex items-center justify-center w-16 h-16 rounded-full bg-(--color-pink) text-white text-4xl font-bold"
+              >1</span
+            >
             <span class="text-2xl leading-tight py-4 pl-2 lg:pl-0">
               Tempo 30 senkt den wahrgenommenen Verkehrslärm gegen über Tempo 50 um die Hälfte.
             </span>
