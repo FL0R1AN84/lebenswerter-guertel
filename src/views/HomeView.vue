@@ -28,7 +28,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
         <span class="text-3xl md:text-4xl leading-tight"> gute Gründe<br />für Tempo 30 </span>
       </h1>
       <section class="w-full max-w-295 flex flex-col items-center px-2 lg:px-0">
-        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
           <h2
             class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
           >
@@ -53,7 +53,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
             möglich.
           </p>
         </section>
-        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
           <h2
             class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
           >
@@ -78,7 +78,7 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
             >
           </p>
         </section>
-        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
           <h2
             class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
           >
@@ -93,11 +93,11 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           </h2>
           <img
             alt="Bild mit dem Hinweis bei Tempo 30: 9 von 10 überleben eine Kollision bei 30 km/h und bei Tempo 50: nur 2 von 10 überlebt eine Kollision bei 50 km/h"
-            class="w-full h-auto py-2"
+            class="w-full h-auto"
             src="/04.webp"
           />
         </section>
-        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
           <h2
             class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
           >
@@ -118,11 +118,11 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           </p>
           <img
             alt="Bild mit der Information das die Zeit die Kinder (5 bis 7 Jahre) ohne Aufsicht im Umfeld des Wohnorts draußen spielen, bei Tempo 50 (Durchgangsverkehr) sind es 32 Minuten, bei Tempo 30 (Durchgangsverkehr) sind es 53 Minuten und bei Tempo 30 (Verkehrsberuhigt) sind es 66 Minuten."
-            class="w-full h-auto py-2"
+            class="w-full h-auto"
             src="/04.webp"
           />
         </section>
-        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
           <h2
             class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
           >
@@ -147,11 +147,11 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
           </p>
           <img
             alt="Bild mit der Information der Auswertungen an drei Berliner Hauptverkehrsstraßen: Tempo 30 sorgt für bessere Luft."
-            class="w-full h-auto py-2"
+            class="w-full h-auto"
             src="/05.webp"
           />
         </section>
-        <section class="home-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
           <h2 class="text-2xl font-bold text-(--color-pink) py-4 pl-2 lg:pl-0">Quellen:</h2>
           <p>
             <span class="text-(--color-pink) font-bold">1</span> European Environment Agency (EEA)
@@ -221,6 +221,10 @@ import HeaderNavigation from '@/components/HeaderNavigation.vue'
   margin-top: 2rem;
   padding: 1.5rem;
   border-left: 4px solid var(--color-blue);
+  border-radius: 4px;
+}
+
+.home-section img {
   border-radius: 4px;
 }
 

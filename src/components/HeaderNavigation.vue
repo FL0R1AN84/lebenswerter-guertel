@@ -6,7 +6,7 @@ import WebsiteTitle from '@/components/WebsiteTitle.vue'
 <template>
   <router-link to="/">
     <header
-      class="sticky top-0 z-50 flex items-center justify-center bg-white dark:bg-[#181818] shadow-md py-8 pl-4 md:pl-0"
+      class="sticky top-0 z-50 flex flex-col md:flex-row items-center justify-center bg-white dark:bg-(--color-dark) shadow-md py-8 px-4"
     >
       <IconAnimation />
       <WebsiteTitle />

@@ -164,7 +164,6 @@ const handleSubmit = () => {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #333;
 }
 
 .required {
