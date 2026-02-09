@@ -21,7 +21,7 @@ const copyEmailToClipboard = () => {
       <h1 class="privacy-title">Datenschutzerklärung</h1>
       <p class="privacy-date">Stand: 8. Februar 2026</p>
 
-      <section class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+      <section class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
         <h2>Inhaltsübersicht</h2>
         <ul class="index">
           <li><a class="index-link" href="#m3">Verantwortlicher</a></li>
@@ -34,7 +34,7 @@ const copyEmailToClipboard = () => {
         </ul>
       </section>
 
-      <section id="m3" class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50">
+      <section id="m3" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
         <h2>Verantwortlicher</h2>
         <p>
           <strong>IG Lebenswerter Gürtel</strong><br />
@@ -65,7 +65,7 @@ const copyEmailToClipboard = () => {
 
       <section
         id="mOverview"
-        class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50"
+        class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
       >
         <h2>Übersicht der Verarbeitungen</h2>
         <p>
@@ -100,7 +100,7 @@ const copyEmailToClipboard = () => {
 
       <section
         id="m2427"
-        class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50"
+        class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
       >
         <h2>Maßgebliche Rechtsgrundlagen</h2>
         <p>
@@ -159,7 +159,7 @@ const copyEmailToClipboard = () => {
 
       <section
         id="m225"
-        class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50"
+        class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
       >
         <h2>Bereitstellung des Onlineangebots und Webhosting</h2>
         <p>
@@ -234,7 +234,7 @@ const copyEmailToClipboard = () => {
 
       <section
         id="m182"
-        class="privacy-section shadow-md dark:shadow-sm dark:shadow-neutral-800/50"
+        class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
       >
         <h2>Kontakt- und Anfrageverwaltung</h2>
         <p>
