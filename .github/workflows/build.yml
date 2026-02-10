@@ -22,3 +22,10 @@ jobs:
 
       - name: Build the project
         run: npm run build
+
+      - name: Upload dist folder
+        if: github.base_ref == 'main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
