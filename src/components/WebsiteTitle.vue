@@ -1,7 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+defineProps<{
+  isScrolled?: boolean
+}>()
+</script>
 
 <template>
-  <h1 class="website-title">Lebenswerter Gürtel</h1>
+  <h1 :class="{ 'website-title--small': isScrolled }" class="website-title">Lebenswerter Gürtel</h1>
 </template>
 
 <style scoped>
@@ -13,6 +17,13 @@
   animation: fadeInScale 1s ease-out;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   letter-spacing: 2px;
+  transition: font-size 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .website-title--small {
+    font-size: clamp(1rem, 5vw, 2rem);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,15 +40,6 @@
   to {
     opacity: 1;
     transform: scale(1);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 </style>
