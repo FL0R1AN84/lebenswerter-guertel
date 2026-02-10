@@ -26,8 +26,8 @@ onUnmounted(() => {
         isScrolled ? 'py-2' : 'py-8',
       ]"
     >
-      <IconAnimation />
-      <WebsiteTitle />
+      <IconAnimation :is-scrolled="isScrolled" />
+      <WebsiteTitle :is-scrolled="isScrolled" />
     </header>
   </router-link>
 </template>
