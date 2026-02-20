@@ -54,15 +54,33 @@ const validateForm = (): boolean => {
   return Object.keys(errors).length === 0
 }
 
-const handleSubmit = () => {
+const handleSubmit = async () => {
   if (validateForm()) {
-    submitted.success = true
-    formData.name = ''
-    formData.email = ''
-    formData.message = ''
-    setTimeout(() => {
-      submitted.success = false
-    }, 5000)
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to send message')
+      }
+
+      submitted.success = true
+      formData.name = ''
+      formData.email = ''
+      formData.phone = ''
+      formData.message = ''
+
+      setTimeout(() => {
+        submitted.success = false
+      }, 5000)
+    } catch (error) {
+      console.error('Error:', error)
+    }
   }
 }
 </script>
