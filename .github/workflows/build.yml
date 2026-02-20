@@ -4,6 +4,13 @@ on:
     branches:
       - main
       - develop
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   build:
@@ -22,3 +29,15 @@ jobs:
 
       - name: Build the project
         run: npm run build
+
+      - name: Create Pull Request with dist folder
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: 'chore: update dist folder'
+          branch: update-dist-folder
+          delete-branch: true
+          title: 'chore: update dist folder'
+          body: 'Automated build artifacts update'
+          add-paths: |
+            dist/**
