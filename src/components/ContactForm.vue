@@ -59,7 +59,7 @@ const handleSubmit = async () => {
   if (validateForm()) {
     isLoading.value = true
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('/api/contact.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
