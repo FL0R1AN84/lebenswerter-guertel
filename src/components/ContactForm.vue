@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive } from 'vue'
+import { reactive, ref } from 'vue'
 
 interface FormData {
   name: string
@@ -23,7 +23,8 @@ const formData = reactive<FormData>({
 })
 
 const errors = reactive<FormErrors>({})
-const submitted = reactive({ success: false })
+const submitted = reactive({ success: false, error: false })
+const isLoading = ref(false)
 
 const validateForm = (): boolean => {
   errors.name = undefined
@@ -56,6 +57,7 @@ const validateForm = (): boolean => {
 
 const handleSubmit = async () => {
   if (validateForm()) {
+    isLoading.value = true
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -70,6 +72,7 @@ const handleSubmit = async () => {
       }
 
       submitted.success = true
+      submitted.error = false
       formData.name = ''
       formData.email = ''
       formData.phone = ''
@@ -80,6 +83,12 @@ const handleSubmit = async () => {
       }, 5000)
     } catch (error) {
       console.error('Error:', error)
+      submitted.error = true
+      setTimeout(() => {
+        submitted.error = false
+      }, 5000)
+    } finally {
+      isLoading.value = false
     }
   }
 }
@@ -89,6 +98,10 @@ const handleSubmit = async () => {
   <form class="contact-form" @submit.prevent="handleSubmit">
     <div v-if="submitted.success" class="success-message" role="alert">
       Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
+    </div>
+
+    <div v-if="submitted.error" class="error-message" role="alert">
+      Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es später erneut.
     </div>
 
     <div class="form-group">
@@ -154,7 +167,32 @@ const handleSubmit = async () => {
       </p>
     </div>
 
-    <button class="submit-button" type="submit">Nachricht senden</button>
+    <button :disabled="isLoading" class="submit-button" type="submit">
+      <span v-if="!isLoading">Nachricht senden</span>
+      <span v-else class="flex items-center justify-center gap-2">
+        <svg
+          class="animate-spin h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            class="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            stroke-width="4"
+          ></circle>
+          <path
+            class="opacity-75"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        Wird gesendet...
+      </span>
+    </button>
   </form>
 </template>
 
@@ -241,5 +279,10 @@ const handleSubmit = async () => {
 
 .submit-button:active {
   opacity: 0.8;
+}
+
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 </style>
