@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import packageJson from '../../package.json'
+
+const version = packageJson.version
+</script>
+
 <template>
   <footer class="footer">
     <div class="footer-content">
@@ -9,6 +15,7 @@
           Datenschutz
         </router-link>
       </nav>
+      <p class="footer-version">Version {{ version }}</p>
     </div>
   </footer>
 </template>
@@ -47,5 +54,10 @@
   outline: 2px solid var(--color-blue);
   outline-offset: 2px;
   border-radius: 2px;
+}
+
+.footer-version {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
 }
 </style>
