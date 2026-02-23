@@ -60,40 +60,49 @@ const handleSubmit = async () => {
   if (!isValid) return
 
   isLoading.value = true
+  submitted.success = false
+  submitted.error = false
+
   try {
     const response = await fetch('/api/contact.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        Accept: 'application/json',
       },
       body: JSON.stringify(formData),
     })
 
-    const contentType = response.headers.get('content-type')
-
     if (!response.ok) {
-      throw new Error(`Server Error: ${response.status}`)
+      throw new Error(`Server Error: ${response.status} ${response.statusText}`)
     }
 
-    if (contentType && contentType.indexOf('application/json') !== -1) {
-      await response.json()
+    const textData = await response.text()
+
+    try {
+      const result = JSON.parse(textData)
+
+      // If we are here, the JSON is valid
+      console.log('Server response:', result) // Optional debug
+
       submitted.success = true
       submitted.error = false
-    } else {
-      console.error('Received HTML instead of JSON')
-      throw new Error('Invalid server response')
-    }
 
-    formData.name = ''
-    formData.email = ''
-    formData.phone = ''
-    formData.message = ''
+      formData.name = ''
+      formData.email = ''
+      formData.phone = ''
+      formData.message = ''
+    } catch (e) {
+      // This is where "no response" usually happens
+      console.error('JSON Parse Error! The server sent this text instead of JSON:', textData)
+      throw new Error('Invalid server response format')
+    }
 
     setTimeout(() => {
       submitted.success = false
     }, 5000)
   } catch (error) {
-    console.error('Network error:', error)
+    console.error('Submission error:', error)
     submitted.error = true
     submitted.success = false
     setTimeout(() => {
