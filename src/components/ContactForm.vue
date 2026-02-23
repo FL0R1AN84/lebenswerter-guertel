@@ -27,32 +27,37 @@ const submitted = reactive({ success: false, error: false })
 const isLoading = ref(false)
 
 const validateForm = (): boolean => {
-  errors.name = undefined
-  errors.email = undefined
-  errors.message = undefined
+  Object.keys(errors).forEach((key) => delete errors[key as keyof FormErrors])
+
+  let isValid = true
 
   if (!formData.name.trim()) {
     errors.name =
       'Wir würden gerne wissen, wie wir Sie ansprechen dürfen. Bitte geben Sie Ihren Namen ein.'
+    isValid = false
   }
 
   if (!formData.email.trim()) {
     errors.email =
       'Wir möchten sicherstellen, dass wir Sie erreichen können. Bitte geben Sie eine gültige E-Mail-Adresse ein.'
+    isValid = false
   } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
     errors.email =
       'Die E-Mail-Adresse scheint ungültig zu sein. Bitte überprüfen Sie Ihre Eingabe und versuchen Sie es erneut.'
+    isValid = false
   }
 
   if (!formData.message.trim()) {
     errors.message =
       'Wir freuen uns darauf, von Ihnen zu hören! Bitte teilen Sie uns Ihr Anliegen mit, damit wir Ihnen bestmöglich weiterhelfen können.'
+    isValid = false
   } else if (formData.message.trim().length < 10) {
     errors.message =
       'Die Nachricht sollte mindestens 10 Zeichen lang sein, damit wir Ihre Anliegen besser verstehen können.'
+    isValid = false
   }
 
-  return Object.keys(errors).length === 0
+  return isValid
 }
 
 const handleSubmit = async () => {
