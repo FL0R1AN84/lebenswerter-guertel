@@ -68,7 +68,12 @@ const handleSubmit = async () => {
       })
 
       if (!response.ok) {
-        throw new Error('Failed to send message')
+        submitted.error = true
+        console.error('Server returned an error:', response.statusText)
+        setTimeout(() => {
+          submitted.error = false
+        }, 5000)
+        return
       }
 
       submitted.success = true
@@ -82,7 +87,7 @@ const handleSubmit = async () => {
         submitted.success = false
       }, 5000)
     } catch (error) {
-      console.error('Error:', error)
+      console.error('Network error:', error)
       submitted.error = true
       setTimeout(() => {
         submitted.error = false
