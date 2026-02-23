@@ -56,45 +56,51 @@ const validateForm = (): boolean => {
 }
 
 const handleSubmit = async () => {
-  if (validateForm()) {
-    isLoading.value = true
-    try {
-      const response = await fetch('https://lebenswerter-guertel.koeln/api/contact.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
+  const isValid = validateForm()
+  if (!isValid) return
 
-      if (!response.ok) {
-        submitted.error = true
-        console.error('Server returned an error:', response.statusText)
-        setTimeout(() => {
-          submitted.error = false
-        }, 5000)
-        return
-      }
+  isLoading.value = true
+  try {
+    const response = await fetch('/api/contact.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
 
+    const contentType = response.headers.get('content-type')
+
+    if (!response.ok) {
+      throw new Error(`Server Error: ${response.status}`)
+    }
+
+    if (contentType && contentType.indexOf('application/json') !== -1) {
+      await response.json()
       submitted.success = true
       submitted.error = false
-      formData.name = ''
-      formData.email = ''
-      formData.phone = ''
-      formData.message = ''
-
-      setTimeout(() => {
-        submitted.success = false
-      }, 5000)
-    } catch (error) {
-      console.error('Network error:', error)
-      submitted.error = true
-      setTimeout(() => {
-        submitted.error = false
-      }, 5000)
-    } finally {
-      isLoading.value = false
+    } else {
+      console.error('Received HTML instead of JSON')
+      throw new Error('Invalid server response')
     }
+
+    formData.name = ''
+    formData.email = ''
+    formData.phone = ''
+    formData.message = ''
+
+    setTimeout(() => {
+      submitted.success = false
+    }, 5000)
+  } catch (error) {
+    console.error('Network error:', error)
+    submitted.error = true
+    submitted.success = false
+    setTimeout(() => {
+      submitted.error = false
+    }, 5000)
+  } finally {
+    isLoading.value = false
   }
 }
 </script>
