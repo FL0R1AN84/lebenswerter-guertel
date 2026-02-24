@@ -8,11 +8,13 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+vendor
 .DS_Store
 dist
 dist-ssr
 coverage
 *.local
+.env
 
 # Editor directories and files
 .vscode/*
@@ -25,7 +27,6 @@ coverage
 *.sw?
 
 *.tsbuildinfo
-
 .eslintcache
 
 # Cypress
