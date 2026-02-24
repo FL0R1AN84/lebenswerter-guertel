@@ -131,7 +131,6 @@ const handleSubmit = async () => {
         :aria-describedby="errors.name ? 'name-error' : undefined"
         :aria-invalid="!!errors.name"
         class="form-input"
-        required
         type="text"
       />
       <p v-if="errors.name" id="name-error" class="error-message">
@@ -147,7 +146,6 @@ const handleSubmit = async () => {
         :aria-describedby="errors.email ? 'email-error' : undefined"
         :aria-invalid="!!errors.email"
         class="form-input"
-        required
         type="email"
       />
       <p v-if="errors.email" id="email-error" class="error-message">
@@ -178,7 +176,6 @@ const handleSubmit = async () => {
         :aria-describedby="errors.message ? 'message-error' : undefined"
         :aria-invalid="!!errors.message"
         class="form-input form-textarea"
-        required
         rows="5"
       ></textarea>
       <p v-if="errors.message" id="message-error" class="error-message">
