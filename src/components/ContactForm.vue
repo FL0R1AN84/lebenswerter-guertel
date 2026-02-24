@@ -137,7 +137,6 @@ const handleSubmit = async () => {
         :aria-describedby="errors.name ? 'name-error' : undefined"
         :aria-invalid="!!errors.name"
         class="form-input"
-        required
         type="text"
       />
       <p v-if="errors.name" id="name-error" class="error-message">
@@ -153,7 +152,6 @@ const handleSubmit = async () => {
         :aria-describedby="errors.email ? 'email-error' : undefined"
         :aria-invalid="!!errors.email"
         class="form-input"
-        required
         type="email"
       />
       <p v-if="errors.email" id="email-error" class="error-message">
@@ -184,7 +182,6 @@ const handleSubmit = async () => {
         :aria-describedby="errors.message ? 'message-error' : undefined"
         :aria-invalid="!!errors.message"
         class="form-input form-textarea"
-        required
         rows="5"
       ></textarea>
       <p v-if="errors.message" id="message-error" class="error-message">
@@ -232,9 +229,33 @@ const handleSubmit = async () => {
 .success-message {
   margin-bottom: 1rem;
   padding: 1rem;
-  color: #155724;
-  border: 1px solid #c3e6cb;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-green) 0%, #5a9020 100%);
   border-radius: 4px;
+  font-weight: 600;
+}
+
+.error-message {
+  margin-top: 0.5rem;
+  color: var(--color-pink);
+  font-size: 0.875rem;
+}
+
+.form-group .error-message {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-pink);
+}
+
+div.error-message[role='alert'] {
+  margin-bottom: 1rem;
+  margin-top: 0;
+  padding: 1rem;
+  color: #fff;
+  background: linear-gradient(135deg, var(--color-pink) 0%, #a00060 100%);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 .form-group {
@@ -248,7 +269,7 @@ const handleSubmit = async () => {
 }
 
 .required {
-  color: #e74c3c;
+  color: var(--color-pink);
 }
 
 .form-input {
@@ -268,17 +289,12 @@ const handleSubmit = async () => {
 }
 
 .form-input[aria-invalid='true'] {
-  border-color: #e74c3c;
+  border-color: var(--color-pink);
+  box-shadow: 0 0 0 3px rgba(216, 18, 126, 0.1);
 }
 
 .form-textarea {
   resize: vertical;
-}
-
-.error-message {
-  margin-top: 0.5rem;
-  color: #e74c3c;
-  font-size: 0.875rem;
 }
 
 .submit-button {
