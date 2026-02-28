@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { reactive, ref } from 'vue'
+import { nextTick, reactive, ref } from 'vue'
 
 interface FormData {
   name: string
@@ -25,6 +25,14 @@ const formData = reactive<FormData>({
 const errors = reactive<FormErrors>({})
 const submitted = reactive({ success: false, error: false })
 const isLoading = ref(false)
+const formRef = ref<HTMLFormElement | null>(null)
+
+const emit = defineEmits<{ scrollToSection: [] }>()
+
+const scrollToFormTop = async () => {
+  await nextTick()
+  emit('scrollToSection')
+}
 
 const validateForm = (): boolean => {
   Object.keys(errors).forEach((key) => delete errors[key as keyof FormErrors])
@@ -62,7 +70,10 @@ const validateForm = (): boolean => {
 
 const handleSubmit = async () => {
   const isValid = validateForm()
-  if (!isValid) return
+  if (!isValid) {
+    await scrollToFormTop()
+    return
+  }
 
   isLoading.value = true
   submitted.success = false
@@ -73,43 +84,41 @@ const handleSubmit = async () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Accept: 'application/json',
       },
       body: JSON.stringify(formData),
     })
 
+    const contentType = response.headers.get('content-type')
+
     if (!response.ok) {
-      throw new Error(`Server Error: ${response.status} ${response.statusText}`)
+      throw new Error(`Server Error: ${response.status}`)
     }
 
-    const textData = await response.text()
-
-    try {
-      const result = JSON.parse(textData)
-
-      // If we are here, the JSON is valid
-      console.log('Server response:', result) // Optional debug
-
+    if (contentType && contentType.indexOf('application/json') !== -1) {
+      await response.json()
       submitted.success = true
       submitted.error = false
-
-      formData.name = ''
-      formData.email = ''
-      formData.phone = ''
-      formData.message = ''
-    } catch (e) {
-      // This is where "no response" usually happens
-      console.error('JSON Parse Error! The server sent this text instead of JSON:', textData)
-      throw new Error('Invalid server response format')
+    } else {
+      console.error('Received HTML instead of JSON')
+      throw new Error('Invalid server response')
     }
+    formData.name = ''
+    formData.email = ''
+    formData.phone = ''
+    formData.message = ''
+
+    await scrollToFormTop()
 
     setTimeout(() => {
       submitted.success = false
     }, 5000)
   } catch (error) {
-    console.error('Submission error:', error)
+    console.error('Network error:', error)
     submitted.error = true
     submitted.success = false
+
+    await scrollToFormTop()
+
     setTimeout(() => {
       submitted.error = false
     }, 5000)
@@ -120,7 +129,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <form class="contact-form" @submit.prevent="handleSubmit">
+  <form ref="formRef" class="contact-form" @submit.prevent="handleSubmit">
     <div v-if="submitted.success" class="success-message" role="alert">
       Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet.
     </div>

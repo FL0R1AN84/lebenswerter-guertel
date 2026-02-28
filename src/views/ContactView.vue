@@ -1,6 +1,13 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
 import ContactForm from '../components/ContactForm.vue'
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
+
+const contactSectionRef = ref<HTMLElement | null>(null)
+
+const scrollToContactSection = () => {
+  contactSectionRef.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+}
 
 const decryptEmail = () => {
   const encoded = 'a29udGFrdEBsZWJlbnN3ZXJ0ZXItZ3VlcnRlbC5rb2Vsbg=='
@@ -54,10 +61,13 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section
+        ref="contactSectionRef"
+        class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
+      >
         <h2>Kontaktformular</h2>
         <p>Oder nutzen Sie das folgende Kontaktformular:</p>
-        <ContactForm />
+        <ContactForm @scroll-to-section="scrollToContactSection" />
       </section>
     </section>
   </main>
