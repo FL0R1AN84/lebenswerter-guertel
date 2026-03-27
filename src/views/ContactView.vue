@@ -14,6 +14,11 @@ const decryptEmail = () => {
   return atob(encoded)
 }
 
+const decryptName = () => {
+  const encoded = 'RmxvcmlhbiBX5GNodGVy'
+  return atob(encoded)
+}
+
 const copyEmailToClipboard = () => {
   const email = decryptEmail()
   navigator.clipboard.writeText(email).then(() => {
@@ -32,6 +37,7 @@ const copyEmailToClipboard = () => {
         <h2>Verantwortlich</h2>
         <p>
           <strong>IG Lebenswerter Gürtel</strong><br />
+          {{ decryptName() }}<br />
           Raderthalgürtel 6D<br />
           50968 Köln<br />
         </p>
@@ -61,10 +67,7 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section
-        ref="contactSectionRef"
-        class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
-      >
+      <section ref="contactSectionRef" class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
         <h2>Kontaktformular</h2>
         <p>Oder nutzen Sie das folgende Kontaktformular:</p>
         <ContactForm @scroll-to-section="scrollToContactSection" />
