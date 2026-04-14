@@ -50,39 +50,39 @@ api/
 
 ---
 
-## Aktuelles (News & Pressemitteilungen)
+## Aktuelles (News & Press Releases)
 
-### Übersicht
+### Overview
 
-Die Seite **Aktuelles** (`/aktuelles`) zeigt aktuelle Informationen und Pressemitteilungen der IG Lebenswerter Gürtel.
-Jeder Beitrag ist eine eigenständige Vue-Component, die in der `NewsView` eingebunden wird.
+The **Aktuelles** page (`/aktuelles`) displays current news and press releases from the IG Lebenswerter Gürtel
+initiative. Each post is a standalone Vue component that is registered in `NewsView`.
 
-### Struktur
+### Structure
 
 ```
 src/
 ├── views/
-│   └── NewsView.vue                  # Route-Level-Component für /aktuelles
+│   └── NewsView.vue                  # Route-level component for /aktuelles
 └── components/
     └── news/
-        └── 2026/                     # Beiträge des Jahres 2026
-            └── IGGruendung.vue       # Pressemitteilung: Gründung der IG
+        └── 2026/                     # Posts for the year 2026
+            └── IGGruendung.vue       # Press release: founding of the IG
 ```
 
-Neue Jahre werden als eigene Unterordner angelegt (`2026/`, `2027/`, …), damit Beiträge nach Jahr sortiert und
-leicht auffindbar bleiben.
+New years are added as separate subfolders (`2026/`, `2027/`, …) so that posts remain sorted by year and are easy
+to find.
 
-### Neuen Beitrag hinzufügen
+### Adding a new post
 
-**1. Component erstellen**
+**1. Create the component**
 
-Neue Datei im passenden Jahresordner anlegen:
+Add a new file in the appropriate year folder:
 
 ```
-src/components/news/2026/MeinNeuerBeitrag.vue
+src/components/news/2026/MyNewPost.vue
 ```
 
-Minimales Template als Ausgangspunkt:
+Minimal template to get started:
 
 ```vue
 
@@ -90,49 +90,49 @@ Minimales Template als Ausgangspunkt:
   <article class="news-card shadow-md dark:shadow-md dark:shadow-neutral-800/50">
     <header class="news-card__header">
       <span class="news-card__date">
-        <time datetime="2026-MM-DD">DD. Monat 2026</time>
+        <time datetime="2026-MM-DD">DD. Month 2026</time>
       </span>
-      <span class="news-card__tag">Pressemitteilung</span>
+      <span class="news-card__tag">Press Release</span>
     </header>
-    <h2 class="news-card__title">Titel des Beitrags</h2>
+    <h2 class="news-card__title">Post title</h2>
     <div class="news-card__body">
-      <p>Inhalt …</p>
+      <p>Content …</p>
     </div>
   </article>
 </template>
 ```
 
-**2. In `NewsView.vue` einbinden**
+**2. Register in `NewsView.vue`**
 
 ```vue
 
 <script lang="ts" setup>
   import HeaderNavigation from '@/components/HeaderNavigation.vue'
   import IGGruendung from '@/components/news/2026/IGGruendung.vue'
-  import MeinNeuerBeitrag from '@/components/news/2026/MeinNeuerBeitrag.vue'  // neu
+  import MyNewPost from '@/components/news/2026/MyNewPost.vue'  // new
 </script>
 
 <template>
   …
   <section class="news-year-group">
     <h2 class="news-year-heading">2026</h2>
-    <MeinNeuerBeitrag/>   <!-- neu, erscheint oben (neuester zuerst) -->
+    <MyNewPost/>     <!-- new – most recent post first -->
     <IGGruendung/>
   </section>
   …
 </template>
 ```
 
-**3. Neues Jahr anlegen**
+**3. Adding a new year**
 
-Für ein neues Jahr einen neuen Ordner erstellen (`src/components/news/2027/`) und in der `NewsView` eine neue
-`<section class="news-year-group">` vor den älteren Jahren einfügen:
+Create a new folder (`src/components/news/2027/`) and add a new `<section class="news-year-group">` above the
+older years in `NewsView`:
 
 ```vue
 <!-- 2027 -->
 <section class="news-year-group">
   <h2 class="news-year-heading">2027</h2>
-  <NeuerBeitrag2027/>
+  <NewPost2027/>
 </section>
 
 <!-- 2026 -->
@@ -141,11 +141,11 @@ Für ein neues Jahr einen neuen Ordner erstellen (`src/components/news/2027/`) u
 </section>
 ```
 
-### Vorhandene Beiträge
+### Existing posts
 
-| Jahr | Component         | Inhalt                                                  |
+| Year | Component         | Content                                                 |
 |------|-------------------|---------------------------------------------------------|
-| 2026 | `IGGruendung.vue` | Pressemitteilung: Gründung der „IG Lebenswerter Gürtel" |
+| 2026 | `IGGruendung.vue` | Press release: founding of the „IG Lebenswerter Gürtel" |
 
 ---
 
