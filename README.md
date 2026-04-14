@@ -27,11 +27,13 @@ A modern, single-page web application built with Vue 3 and TypeScript, serving a
 ```
 src/
 ├── assets/          # Global CSS (base, variables, Tailwind entry)
-├── components/      # Reusable Vue SFCs (HeaderNavigation, FooterNavigation, ContactForm, …)
+├── components/      # Reusable Vue SFCs
+│   ├── news/        # News & press-release components, organised by year
+│   │   └── 2026/    # Components for the year 2026
 │   └── __tests__/   # Vitest unit tests co-located with components
 ├── router/          # Vue Router configuration (HTML5 history, scroll-behaviour)
 ├── stores/          # Pinia stores
-└── views/           # Route-level components (HomeView, ContactView, PrivacyPolicyView)
+└── views/           # Route-level components (HomeView, ContactView, NewsView, …)
 
 api/
 └── contact.php      # Server-side contact form handler
@@ -42,8 +44,108 @@ api/
 | Path           | Name      | Component               |
 |----------------|-----------|-------------------------|
 | `/`            | `home`    | `HomeView.vue`          |
+| `/aktuelles`   | `news`    | `NewsView.vue`          |
 | `/kontakt`     | `contact` | `ContactView.vue`       |
 | `/datenschutz` | `privacy` | `PrivacyPolicyView.vue` |
+
+---
+
+## Aktuelles (News & Pressemitteilungen)
+
+### Übersicht
+
+Die Seite **Aktuelles** (`/aktuelles`) zeigt aktuelle Informationen und Pressemitteilungen der IG Lebenswerter Gürtel.
+Jeder Beitrag ist eine eigenständige Vue-Component, die in der `NewsView` eingebunden wird.
+
+### Struktur
+
+```
+src/
+├── views/
+│   └── NewsView.vue                  # Route-Level-Component für /aktuelles
+└── components/
+    └── news/
+        └── 2026/                     # Beiträge des Jahres 2026
+            └── IGGruendung.vue       # Pressemitteilung: Gründung der IG
+```
+
+Neue Jahre werden als eigene Unterordner angelegt (`2026/`, `2027/`, …), damit Beiträge nach Jahr sortiert und
+leicht auffindbar bleiben.
+
+### Neuen Beitrag hinzufügen
+
+**1. Component erstellen**
+
+Neue Datei im passenden Jahresordner anlegen:
+
+```
+src/components/news/2026/MeinNeuerBeitrag.vue
+```
+
+Minimales Template als Ausgangspunkt:
+
+```vue
+
+<template>
+  <article class="news-card shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+    <header class="news-card__header">
+      <span class="news-card__date">
+        <time datetime="2026-MM-DD">DD. Monat 2026</time>
+      </span>
+      <span class="news-card__tag">Pressemitteilung</span>
+    </header>
+    <h2 class="news-card__title">Titel des Beitrags</h2>
+    <div class="news-card__body">
+      <p>Inhalt …</p>
+    </div>
+  </article>
+</template>
+```
+
+**2. In `NewsView.vue` einbinden**
+
+```vue
+
+<script lang="ts" setup>
+  import HeaderNavigation from '@/components/HeaderNavigation.vue'
+  import IGGruendung from '@/components/news/2026/IGGruendung.vue'
+  import MeinNeuerBeitrag from '@/components/news/2026/MeinNeuerBeitrag.vue'  // neu
+</script>
+
+<template>
+  …
+  <section class="news-year-group">
+    <h2 class="news-year-heading">2026</h2>
+    <MeinNeuerBeitrag/>   <!-- neu, erscheint oben (neuester zuerst) -->
+    <IGGruendung/>
+  </section>
+  …
+</template>
+```
+
+**3. Neues Jahr anlegen**
+
+Für ein neues Jahr einen neuen Ordner erstellen (`src/components/news/2027/`) und in der `NewsView` eine neue
+`<section class="news-year-group">` vor den älteren Jahren einfügen:
+
+```vue
+<!-- 2027 -->
+<section class="news-year-group">
+  <h2 class="news-year-heading">2027</h2>
+  <NeuerBeitrag2027/>
+</section>
+
+<!-- 2026 -->
+<section class="news-year-group">
+  …
+</section>
+```
+
+### Vorhandene Beiträge
+
+| Jahr | Component         | Inhalt                                                  |
+|------|-------------------|---------------------------------------------------------|
+| 2026 | `IGGruendung.vue` | Pressemitteilung: Gründung der „IG Lebenswerter Gürtel" |
 
 ---
 
