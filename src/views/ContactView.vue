@@ -43,7 +43,7 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section id="kontakt" class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
         <h2>Kontakt</h2>
         <p>
           E-Mail:
