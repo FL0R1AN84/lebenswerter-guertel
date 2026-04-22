@@ -2,6 +2,27 @@
 import { ref } from 'vue'
 import ContactForm from '../components/ContactForm.vue'
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Kontakt – IG Lebenswerter Gürtel',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Kontaktieren Sie die IG Lebenswerter Gürtel. Wir setzen uns für Tempo 30 und Lärmschutz auf dem Kölner Gürtel ein.',
+    },
+    { name: 'keywords', content: 'Kontakt, IG Lebenswerter Gürtel, Köln, Gürtel, Tempo 30' },
+    { property: 'og:title', content: 'Kontakt – IG Lebenswerter Gürtel' },
+    {
+      property: 'og:description',
+      content: 'Kontaktieren Sie die Initiative IG Lebenswerter Gürtel.',
+    },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:locale', content: 'de_DE' },
+    { name: 'robots', content: 'noindex, follow' },
+  ],
+})
 
 const contactSectionRef = ref<HTMLElement | null>(null)
 

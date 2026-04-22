@@ -1,6 +1,34 @@
 <script lang="ts" setup>
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
 import IGGruendung from '@/components/news/2026/IGGruendung.vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Aktuelles – IG Lebenswerter Gürtel',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Aktuelle Pressemitteilungen und Neuigkeiten der Initiative „IG Lebenswerter Gürtel" – gegründet von Anwohnenden des Kölner Gürtels im Kampf gegen Verkehrslärm.',
+    },
+    { name: 'keywords', content: 'IG Lebenswerter Gürtel, Aktuelles, Pressemitteilung, Gründung, Untätigkeitsklage, Köln, Gürtel, Tempo 30' },
+    { property: 'og:title', content: 'Aktuelles – IG Lebenswerter Gürtel' },
+    {
+      property: 'og:description',
+      content:
+        'Aktuelle Pressemitteilungen und Neuigkeiten der Initiative „IG Lebenswerter Gürtel" – gegründet von Anwohnenden des Kölner Gürtels im Kampf gegen Verkehrslärm.',
+    },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:locale', content: 'de_DE' },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:title', content: 'Aktuelles – IG Lebenswerter Gürtel' },
+    {
+      name: 'twitter:description',
+      content:
+        'Aktuelle Pressemitteilungen und Neuigkeiten der Initiative „IG Lebenswerter Gürtel" – gegründet von Anwohnenden des Kölner Gürtels.',
+    },
+  ],
+})
 </script>
 
 <template>
