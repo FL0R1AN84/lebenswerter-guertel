@@ -1,5 +1,33 @@
 <script lang="ts" setup>
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'IG Lebenswerter Gürtel – Tempo 30 für den Kölner Gürtel',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'Die IG Lebenswerter Gürtel setzt sich für Tempo 30 auf dem Kölner Gürtel ein – für weniger Lärm, bessere Luft und mehr Verkehrssicherheit im Kölner Südwesten.',
+    },
+    { name: 'keywords', content: 'Lebenswerter Gürtel, Tempo 30, Köln, Verkehrslärm, Lärmschutz, Kölner Gürtel, IG Lebenswerter Gürtel' },
+    { property: 'og:title', content: 'IG Lebenswerter Gürtel – Tempo 30 für den Kölner Gürtel' },
+    {
+      property: 'og:description',
+      content:
+        'Die IG Lebenswerter Gürtel setzt sich für Tempo 30 auf dem Kölner Gürtel ein – für weniger Lärm, bessere Luft und mehr Verkehrssicherheit.',
+    },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:locale', content: 'de_DE' },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:title', content: 'IG Lebenswerter Gürtel – Tempo 30 für den Kölner Gürtel' },
+    {
+      name: 'twitter:description',
+      content:
+        'Die IG Lebenswerter Gürtel setzt sich für Tempo 30 auf dem Kölner Gürtel ein – für weniger Lärm, bessere Luft und mehr Verkehrssicherheit.',
+    },
+  ],
+})
 </script>
 
 <template>

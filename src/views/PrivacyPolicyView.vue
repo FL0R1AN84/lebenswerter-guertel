@@ -1,5 +1,19 @@
 <script lang="ts" setup>
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
+import { useHead } from '@unhead/vue'
+
+useHead({
+  title: 'Datenschutzerklärung – IG Lebenswerter Gürtel',
+  meta: [
+    {
+      name: 'description',
+      content: 'Datenschutzerklärung IG Lebenswerter Gürtel.',
+    },
+    { name: 'robots', content: 'noindex, follow' },
+    { property: 'og:title', content: 'Datenschutz – IG Lebenswerter Gürtel' },
+    { property: 'og:locale', content: 'de_DE' },
+  ],
+})
 
 const decryptEmail = () => {
   const encoded = 'a29udGFrdEBsZWJlbnN3ZXJ0ZXItZ3VlcnRlbC5rb2Vsbg=='
@@ -63,14 +77,11 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section
-        id="mOverview"
-        class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
-      >
+      <section id="mOverview" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
         <h2>Übersicht der Verarbeitungen</h2>
         <p>
-          Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer
-          Verarbeitung zusammen und verweist auf die betroffenen Personen.
+          Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen
+          und verweist auf die betroffenen Personen.
         </p>
 
         <h3>Arten der verarbeiteten Daten</h3>
@@ -98,191 +109,153 @@ const copyEmailToClipboard = () => {
         </ul>
       </section>
 
-      <section
-        id="m2427"
-        class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
-      >
+      <section id="m2427" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
         <h2>Maßgebliche Rechtsgrundlagen</h2>
         <p>
-          <strong>Maßgebliche Rechtsgrundlagen nach der DSGVO: </strong>Im Folgenden erhalten Sie
-          eine Übersicht der Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten
-          verarbeiten. Bitte nehmen Sie zur Kenntnis, dass neben den Regelungen der DSGVO nationale
-          Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder Sitzland gelten können. Sollten
-          ferner im Einzelfall speziellere Rechtsgrundlagen maßgeblich sein, teilen wir Ihnen diese
-          in der Datenschutzerklärung mit.
+          <strong>Maßgebliche Rechtsgrundlagen nach der DSGVO: </strong>Im Folgenden erhalten Sie eine Übersicht der
+          Rechtsgrundlagen der DSGVO, auf deren Basis wir personenbezogene Daten verarbeiten. Bitte nehmen Sie zur
+          Kenntnis, dass neben den Regelungen der DSGVO nationale Datenschutzvorgaben in Ihrem bzw. unserem Wohn- oder
+          Sitzland gelten können. Sollten ferner im Einzelfall speziellere Rechtsgrundlagen maßgeblich sein, teilen wir
+          Ihnen diese in der Datenschutzerklärung mit.
         </p>
 
         <ul>
           <li>
-            <strong
-              >Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b)
-              DSGVO)</strong
-            >
-            - Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die
-            betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich,
-            die auf Anfrage der betroffenen Person erfolgen.
+            <strong>Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO)</strong>
+            - Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist,
+            oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Anfrage der betroffenen Person
+            erfolgen.
           </li>
           <li>
-            <strong>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)</strong> - die
-            Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines
-            Dritten notwendig, vorausgesetzt, dass die Interessen, Grundrechte und Grundfreiheiten
-            der betroffenen Person, die den Schutz personenbezogener Daten verlangen, nicht
-            überwiegen.
+            <strong>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)</strong> - die Verarbeitung ist zur
+            Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten notwendig, vorausgesetzt, dass
+            die Interessen, Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener
+            Daten verlangen, nicht überwiegen.
           </li>
         </ul>
 
         <p>
-          <strong>Nationale Datenschutzregelungen in Deutschland: </strong>Zusätzlich zu den
-          Datenschutzregelungen der DSGVO gelten nationale Regelungen zum Datenschutz in
-          Deutschland. Hierzu gehört insbesondere das Gesetz zum Schutz vor Missbrauch
-          personenbezogener Daten bei der Datenverarbeitung (Bundesdatenschutzgesetz – BDSG). Das
-          BDSG enthält insbesondere Spezialregelungen zum Recht auf Auskunft, zum Recht auf
-          Löschung, zum Widerspruchsrecht, zur Verarbeitung besonderer Kategorien personenbezogener
-          Daten, zur Verarbeitung für andere Zwecke und zur Übermittlung sowie automatisierten
-          Entscheidungsfindung im Einzelfall einschließlich Profiling. Ferner können
-          Landesdatenschutzgesetze der einzelnen Bundesländer zur Anwendung gelangen.
+          <strong>Nationale Datenschutzregelungen in Deutschland: </strong>Zusätzlich zu den Datenschutzregelungen der
+          DSGVO gelten nationale Regelungen zum Datenschutz in Deutschland. Hierzu gehört insbesondere das Gesetz zum
+          Schutz vor Missbrauch personenbezogener Daten bei der Datenverarbeitung (Bundesdatenschutzgesetz – BDSG). Das
+          BDSG enthält insbesondere Spezialregelungen zum Recht auf Auskunft, zum Recht auf Löschung, zum
+          Widerspruchsrecht, zur Verarbeitung besonderer Kategorien personenbezogener Daten, zur Verarbeitung für andere
+          Zwecke und zur Übermittlung sowie automatisierten Entscheidungsfindung im Einzelfall einschließlich Profiling.
+          Ferner können Landesdatenschutzgesetze der einzelnen Bundesländer zur Anwendung gelangen.
         </p>
 
         <p>
-          <strong>Hinweis auf Geltung DSGVO und Schweizer DSG: </strong>Diese Datenschutzhinweise
-          dienen sowohl der Informationserteilung nach dem Schweizer DSG als auch nach der
-          Datenschutzgrundverordnung (DSGVO). Aus diesem Grund bitten wir Sie zu beachten, dass
-          aufgrund der breiteren räumlichen Anwendung und Verständlichkeit die Begriffe der DSGVO
-          verwendet werden. Insbesondere statt der im Schweizer DSG verwendeten Begriffe
-          „Bearbeitung" von „Personendaten", "überwiegendes Interesse" und "besonders schützenswerte
-          Personendaten" werden die in der DSGVO verwendeten Begriffe „Verarbeitung" von
-          „personenbezogenen Daten" sowie "berechtigtes Interesse" und "besondere Kategorien von
-          Daten" verwendet. Die gesetzliche Bedeutung der Begriffe wird jedoch im Rahmen der Geltung
-          des Schweizer DSG weiterhin nach dem Schweizer DSG bestimmt.
+          <strong>Hinweis auf Geltung DSGVO und Schweizer DSG: </strong>Diese Datenschutzhinweise dienen sowohl der
+          Informationserteilung nach dem Schweizer DSG als auch nach der Datenschutzgrundverordnung (DSGVO). Aus diesem
+          Grund bitten wir Sie zu beachten, dass aufgrund der breiteren räumlichen Anwendung und Verständlichkeit die
+          Begriffe der DSGVO verwendet werden. Insbesondere statt der im Schweizer DSG verwendeten Begriffe
+          „Bearbeitung" von „Personendaten", "überwiegendes Interesse" und "besonders schützenswerte Personendaten"
+          werden die in der DSGVO verwendeten Begriffe „Verarbeitung" von „personenbezogenen Daten" sowie "berechtigtes
+          Interesse" und "besondere Kategorien von Daten" verwendet. Die gesetzliche Bedeutung der Begriffe wird jedoch
+          im Rahmen der Geltung des Schweizer DSG weiterhin nach dem Schweizer DSG bestimmt.
         </p>
       </section>
 
-      <section
-        id="m225"
-        class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
-      >
+      <section id="m225" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
         <h2>Bereitstellung des Onlineangebots und Webhosting</h2>
         <p>
-          Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen
-          zu können. Zu diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist,
-          um die Inhalte und Funktionen unserer Online-Dienste an den Browser oder das Endgerät der
-          Nutzer zu übermitteln.
+          Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen zu können. Zu
+          diesem Zweck verarbeiten wir die IP-Adresse des Nutzers, die notwendig ist, um die Inhalte und Funktionen
+          unserer Online-Dienste an den Browser oder das Endgerät der Nutzer zu übermitteln.
         </p>
 
         <ul class="m-elements">
           <li>
-            <strong>Verarbeitete Datenarten:</strong> Nutzungsdaten (z. B. Seitenaufrufe und
-            Verweildauer, Klickpfade, Nutzungsintensität und -frequenz, verwendete Gerätetypen und
-            Betriebssysteme, Interaktionen mit Inhalten und Funktionen); Meta-, Kommunikations- und
-            Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte
-            Personen); Protokolldaten (z. B. Logfiles betreffend Logins oder den Abruf von Daten
-            oder Zugriffszeiten.). Inhaltsdaten (z. B. textliche oder bildliche Nachrichten und
-            Beiträge sowie die sie betreffenden Informationen, wie z. B. Angaben zur Autorenschaft
-            oder Zeitpunkt der Erstellung).
+            <strong>Verarbeitete Datenarten:</strong> Nutzungsdaten (z. B. Seitenaufrufe und Verweildauer, Klickpfade,
+            Nutzungsintensität und -frequenz, verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und
+            Funktionen); Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben,
+            Identifikationsnummern, beteiligte Personen); Protokolldaten (z. B. Logfiles betreffend Logins oder den
+            Abruf von Daten oder Zugriffszeiten.). Inhaltsdaten (z. B. textliche oder bildliche Nachrichten und Beiträge
+            sowie die sie betreffenden Informationen, wie z. B. Angaben zur Autorenschaft oder Zeitpunkt der
+            Erstellung).
+          </li>
+          <li><strong>Betroffene Personen:</strong> Nutzer (z. B. Webseitenbesucher, Nutzer von Onlinediensten).</li>
+          <li>
+            <strong>Zwecke der Verarbeitung:</strong> Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.
+            Informationstechnische Infrastruktur (Betrieb und Bereitstellung von Informationssystemen und technischen
+            Geräten (Computer, Server etc.)).
           </li>
           <li>
-            <strong>Betroffene Personen:</strong> Nutzer (z. B. Webseitenbesucher, Nutzer von
-            Onlinediensten).
+            <strong>Aufbewahrung und Löschung:</strong> Löschung entsprechend Angaben im Abschnitt "Allgemeine
+            Informationen zur Datenspeicherung und Löschung".
           </li>
-          <li>
-            <strong>Zwecke der Verarbeitung:</strong> Bereitstellung unseres Onlineangebotes und
-            Nutzerfreundlichkeit. Informationstechnische Infrastruktur (Betrieb und Bereitstellung
-            von Informationssystemen und technischen Geräten (Computer, Server etc.)).
-          </li>
-          <li>
-            <strong>Aufbewahrung und Löschung:</strong> Löschung entsprechend Angaben im Abschnitt
-            "Allgemeine Informationen zur Datenspeicherung und Löschung".
-          </li>
-          <li>
-            <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f)
-            DSGVO).
-          </li>
+          <li><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</li>
         </ul>
 
         <p><strong>Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:</strong></p>
         <ul class="m-elements">
           <li>
-            <strong>Bereitstellung Onlineangebot auf gemietetem Speicherplatz: </strong>Für die
-            Bereitstellung unseres Onlineangebotes nutzen wir Speicherplatz, Rechenkapazität und
-            Software, die wir von einem entsprechenden Serveranbieter (auch "Webhoster" genannt)
-            mieten oder anderweitig beziehen;
-            <span
-              ><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f)
-              DSGVO).</span
-            >
+            <strong>Bereitstellung Onlineangebot auf gemietetem Speicherplatz: </strong>Für die Bereitstellung unseres
+            Onlineangebotes nutzen wir Speicherplatz, Rechenkapazität und Software, die wir von einem entsprechenden
+            Serveranbieter (auch "Webhoster" genannt) mieten oder anderweitig beziehen;
+            <span><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</span>
           </li>
           <li>
-            <strong>E-Mail-Versand und -Hosting: </strong>Die von uns in Anspruch genommenen
-            Webhosting-Leistungen umfassen ebenfalls den Versand, den Empfang sowie die Speicherung
-            von E-Mails. Zu diesen Zwecken werden die Adressen der Empfänger sowie Absender als auch
-            weitere Informationen betreffend den E-Mailversand (z. B. die beteiligten Provider)
-            sowie die Inhalte der jeweiligen E-Mails verarbeitet. Die vorgenannten Daten können
-            ferner zu Zwecken der Erkennung von SPAM verarbeitet werden. Wir bitten darum, zu
-            beachten, dass E-Mails im Internet grundsätzlich nicht verschlüsselt versendet werden.
-            Im Regelfall werden E-Mails zwar auf dem Transportweg verschlüsselt, aber (sofern kein
-            sogenanntes Ende-zu-Ende-Verschlüsselungsverfahren eingesetzt wird) nicht auf den
-            Servern, von denen sie abgesendet und empfangen werden. Wir können daher für den
-            Übertragungsweg der E-Mails zwischen dem Absender und dem Empfang auf unserem Server
-            keine Verantwortung übernehmen;
-            <span
-              ><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f)
-              DSGVO).</span
-            >
+            <strong>E-Mail-Versand und -Hosting: </strong>Die von uns in Anspruch genommenen Webhosting-Leistungen
+            umfassen ebenfalls den Versand, den Empfang sowie die Speicherung von E-Mails. Zu diesen Zwecken werden die
+            Adressen der Empfänger sowie Absender als auch weitere Informationen betreffend den E-Mailversand (z. B. die
+            beteiligten Provider) sowie die Inhalte der jeweiligen E-Mails verarbeitet. Die vorgenannten Daten können
+            ferner zu Zwecken der Erkennung von SPAM verarbeitet werden. Wir bitten darum, zu beachten, dass E-Mails im
+            Internet grundsätzlich nicht verschlüsselt versendet werden. Im Regelfall werden E-Mails zwar auf dem
+            Transportweg verschlüsselt, aber (sofern kein sogenanntes Ende-zu-Ende-Verschlüsselungsverfahren eingesetzt
+            wird) nicht auf den Servern, von denen sie abgesendet und empfangen werden. Wir können daher für den
+            Übertragungsweg der E-Mails zwischen dem Absender und dem Empfang auf unserem Server keine Verantwortung
+            übernehmen;
+            <span><strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</span>
           </li>
         </ul>
       </section>
 
-      <section
-        id="m182"
-        class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50"
-      >
+      <section id="m182" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
         <h2>Kontakt- und Anfrageverwaltung</h2>
         <p>
-          Bei der Kontaktaufnahme mit uns (z. B. per Post, Kontaktformular, E-Mail, Telefon oder via
-          soziale Medien) sowie im Rahmen bestehender Nutzer- und Geschäftsbeziehungen werden die
-          Angaben der anfragenden Personen verarbeitet, soweit dies zur Beantwortung der
-          Kontaktanfragen und etwaiger angefragter Maßnahmen erforderlich ist.
+          Bei der Kontaktaufnahme mit uns (z. B. per Post, Kontaktformular, E-Mail, Telefon oder via soziale Medien)
+          sowie im Rahmen bestehender Nutzer- und Geschäftsbeziehungen werden die Angaben der anfragenden Personen
+          verarbeitet, soweit dies zur Beantwortung der Kontaktanfragen und etwaiger angefragter Maßnahmen erforderlich
+          ist.
         </p>
 
         <ul class="m-elements">
           <li>
-            <strong>Verarbeitete Datenarten:</strong> Kontaktdaten (z. B. Post- und E-Mail-Adressen
-            oder Telefonnummern); Inhaltsdaten (z. B. textliche oder bildliche Nachrichten und
-            Beiträge sowie die sie betreffenden Informationen, wie z. B. Angaben zur Autorenschaft
-            oder Zeitpunkt der Erstellung). Meta-, Kommunikations- und Verfahrensdaten (z. B.
-            IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen).
+            <strong>Verarbeitete Datenarten:</strong> Kontaktdaten (z. B. Post- und E-Mail-Adressen oder
+            Telefonnummern); Inhaltsdaten (z. B. textliche oder bildliche Nachrichten und Beiträge sowie die sie
+            betreffenden Informationen, wie z. B. Angaben zur Autorenschaft oder Zeitpunkt der Erstellung). Meta-,
+            Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte
+            Personen).
           </li>
           <li><strong>Betroffene Personen:</strong> Kommunikationspartner.</li>
           <li>
-            <strong>Zwecke der Verarbeitung:</strong> Kommunikation; Organisations- und
-            Verwaltungsverfahren; Feedback (z. B. Sammeln von Feedback via Online-Formular).
-            Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.
+            <strong>Zwecke der Verarbeitung:</strong> Kommunikation; Organisations- und Verwaltungsverfahren; Feedback
+            (z. B. Sammeln von Feedback via Online-Formular). Bereitstellung unseres Onlineangebotes und
+            Nutzerfreundlichkeit.
           </li>
           <li>
-            <strong>Aufbewahrung und Löschung:</strong> Löschung entsprechend Angaben im Abschnitt
-            "Allgemeine Informationen zur Datenspeicherung und Löschung".
+            <strong>Aufbewahrung und Löschung:</strong> Löschung entsprechend Angaben im Abschnitt "Allgemeine
+            Informationen zur Datenspeicherung und Löschung".
           </li>
           <li>
-            <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f)
-            DSGVO). Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b)
-            DSGVO).
+            <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
+            Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO).
           </li>
         </ul>
 
         <p><strong>Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:</strong></p>
         <ul class="m-elements">
           <li>
-            <strong>Kontaktformular: </strong>Bei Kontaktaufnahme über unser Kontaktformular, per
-            E-Mail oder anderen Kommunikationswegen, verarbeiten wir die uns übermittelten
-            personenbezogenen Daten zur Beantwortung und Bearbeitung des jeweiligen Anliegens. Dies
-            umfasst in der Regel Angaben wie Name, Kontaktinformationen und gegebenenfalls weitere
-            Informationen, die uns mitgeteilt werden und zur angemessenen Bearbeitung erforderlich
-            sind. Wir nutzen diese Daten ausschließlich für den angegebenen Zweck der
-            Kontaktaufnahme und Kommunikation;
+            <strong>Kontaktformular: </strong>Bei Kontaktaufnahme über unser Kontaktformular, per E-Mail oder anderen
+            Kommunikationswegen, verarbeiten wir die uns übermittelten personenbezogenen Daten zur Beantwortung und
+            Bearbeitung des jeweiligen Anliegens. Dies umfasst in der Regel Angaben wie Name, Kontaktinformationen und
+            gegebenenfalls weitere Informationen, die uns mitgeteilt werden und zur angemessenen Bearbeitung
+            erforderlich sind. Wir nutzen diese Daten ausschließlich für den angegebenen Zweck der Kontaktaufnahme und
+            Kommunikation;
             <span
-              ><strong>Rechtsgrundlagen:</strong> Vertragserfüllung und vorvertragliche Anfragen
-              (Art. 6 Abs. 1 S. 1 lit. b) DSGVO), Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f)
-              DSGVO).</span
+              ><strong>Rechtsgrundlagen:</strong> Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1
+              lit. b) DSGVO), Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).</span
             >
           </li>
         </ul>
