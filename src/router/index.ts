@@ -34,7 +34,9 @@ const router = createRouter({
       return savedPosition
     }
     if (to.hash) {
-      return { el: to.hash, behavior: 'smooth' }
+      const header = document.querySelector('header')
+      const offset = header ? header.offsetHeight : 0
+      return { el: to.hash, behavior: 'smooth', top: offset }
     }
     return { top: 0 }
   },
