@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import ContactView from '../views/ContactView.vue'
 import PrivacyPolicyView from '@/views/PrivacyPolicyView.vue'
 import NewsView from '@/views/NewsView.vue'
+import AntragView from '@/views/AntragView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -27,6 +28,11 @@ const router = createRouter({
       path: '/datenschutz',
       name: 'privacy',
       component: PrivacyPolicyView,
+    },
+    {
+      path: '/antrag',
+      name: 'antrag',
+      component: AntragView,
     },
   ],
   scrollBehavior(to, from, savedPosition) {

@@ -35,12 +35,9 @@ onUnmounted(() => {
       <router-link v-if="route.path !== '/'" active-class="nav-link--active" class="nav-link" to="/">
         Startseite
       </router-link>
-      <router-link active-class="nav-link--active" class="nav-link" to="/aktuelles">
-        Aktuelles
-      </router-link>
-      <router-link active-class="nav-link--active" class="nav-link" to="/kontakt#kontakt">
-        Kontakt
-      </router-link>
+      <router-link active-class="nav-link--active" class="nav-link" to="/aktuelles"> Aktuelles </router-link>
+      <router-link active-class="nav-link--active" class="nav-link" to="/antrag"> Antrag </router-link>
+      <router-link active-class="nav-link--active" class="nav-link" to="/kontakt#kontakt"> Kontakt </router-link>
     </nav>
   </header>
 </template>
@@ -62,9 +59,4 @@ onUnmounted(() => {
   outline-offset: 2px;
   border-radius: 2px;
 }
-
-.nav-link--active {
-  color: var(--color-blue);
-}
 </style>
-
