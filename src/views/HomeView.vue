@@ -48,6 +48,64 @@ useHead({
         Jetzt machen wir den Gürtel wieder lebenswert!
       </h3>
     </div>
+    <div class="cta-banner">
+      <div class="cta-banner__inner">
+        <div class="cta-banner__text">
+          <h2 class="cta-banner__title">Jetzt selbst aktiv werden!</h2>
+          <p class="cta-banner__body">
+            Als Anwohnerin oder Anwohner des Kölner Gürtels haben Sie das Recht, einen formellen
+            Antrag auf Verkehrslärm reduzierende Maßnahmen bei der Stadt Köln zu stellen. Nutzen
+            Sie dieses Recht – je mehr Anträge gestellt werden, desto größer der Druck auf die
+            Entscheidungsträger.
+          </p>
+        </div>
+        <router-link class="cta-banner__button" to="/antrag">
+          <svg
+            class="size-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          Zum Antrag
+        </router-link>
+      </div>
+    </div>
+    <div class="cta-note">
+      <div class="cta-note__inner">
+        <p>
+          Interesse, sich in der IG Lebenswerter Gürtel zu engagieren? Melde dich bei uns auf
+          <a
+            class="cta-note__link"
+            href="https://instagram.com/lebenswerter_guertel/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              class="size-4"
+              fill="currentColor"
+              role="img"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+            @lebenswerter_guertel
+          </a>
+          oder per
+          <router-link class="cta-note__link" to="/kontakt#kontakt">E-Mail</router-link>.
+        </p>
+      </div>
+    </div>
     <div class="flex flex-col items-center justify-center py-8 px-2 lg:px-0">
       <h1
         class="flex flex-col sm:flex-row items-center gap-4 text-(--color-pink) text-center sm:text-left"
@@ -245,6 +303,85 @@ useHead({
 </template>
 
 <style scoped>
+.cta-banner {
+  background-color: color-mix(in srgb, var(--color-green) 12%, transparent);
+  border-top: 3px solid var(--color-green);
+  border-bottom: 3px solid var(--color-green);
+  padding: 2rem 1.5rem;
+}
+
+.cta-banner__inner {
+  max-width: 74rem; /* max-w-295 equivalent */
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.cta-banner__text {
+  flex: 1;
+  min-width: 200px;
+}
+
+.cta-banner__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-blue);
+  margin-bottom: 0.5rem;
+}
+
+.cta-banner__body {
+  line-height: 1.6;
+  color: inherit;
+}
+
+.cta-banner__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background-color: var(--color-green);
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.3s;
+}
+
+.cta-banner__button:hover {
+  background-color: var(--color-blue);
+}
+
+.cta-note {
+  background-color: color-mix(in srgb, var(--color-blue) 6%, transparent);
+  border-bottom: 2px solid color-mix(in srgb, var(--color-blue) 20%, transparent);
+  padding: 0.875rem 1.5rem;
+  text-align: center;
+}
+
+.cta-note__inner {
+  max-width: 74rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.cta-note__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--color-blue);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-note__link:hover {
+  text-decoration: underline;
+}
+
 .home-section {
   margin-top: 2rem;
   padding: 1.5rem;
