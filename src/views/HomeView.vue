@@ -10,7 +10,10 @@ useHead({
       content:
         'Die IG Lebenswerter Gürtel setzt sich für Tempo 30 auf dem Kölner Gürtel ein – für weniger Lärm, bessere Luft und mehr Verkehrssicherheit im Kölner Südwesten.',
     },
-    { name: 'keywords', content: 'Lebenswerter Gürtel, Tempo 30, Köln, Verkehrslärm, Lärmschutz, Kölner Gürtel, IG Lebenswerter Gürtel' },
+    {
+      name: 'keywords',
+      content: 'Lebenswerter Gürtel, Tempo 30, Köln, Verkehrslärm, Lärmschutz, Kölner Gürtel, IG Lebenswerter Gürtel',
+    },
     { property: 'og:title', content: 'IG Lebenswerter Gürtel – Tempo 30 für den Kölner Gürtel' },
     {
       property: 'og:description',
@@ -33,9 +36,7 @@ useHead({
 <template>
   <HeaderNavigation />
   <main>
-    <div
-      class="flex flex-col items-center justify-center bg-linear-to-br from-(--color-blue) to-(--color-green)"
-    >
+    <div class="flex flex-col items-center justify-center bg-linear-to-br from-(--color-blue) to-(--color-green)">
       <h2 class="text-2xl md:text-4xl font-bold text-white py-8 px-2 lg:px-0 text-center">
         Die Luxemburger ist wieder lebenswert.
       </h2>
@@ -53,10 +54,9 @@ useHead({
         <div class="cta-banner__text">
           <h2 class="cta-banner__title">Jetzt selbst aktiv werden!</h2>
           <p class="cta-banner__body">
-            Als Anwohnerin oder Anwohner des Kölner Gürtels haben Sie das Recht, einen formellen
-            Antrag auf Verkehrslärm reduzierende Maßnahmen bei der Stadt Köln zu stellen. Nutzen
-            Sie dieses Recht – je mehr Anträge gestellt werden, desto größer der Druck auf die
-            Entscheidungsträger.
+            Als Anwohnerin oder Anwohner des Kölner Gürtels haben Sie das Recht, einen formellen Antrag auf Verkehrslärm
+            reduzierende Maßnahmen bei der Stadt Köln zu stellen. Nutzen Sie dieses Recht – je mehr Anträge gestellt
+            werden, desto größer der Druck auf die Entscheidungsträger.
           </p>
         </div>
         <router-link class="cta-banner__button" to="/antrag">
@@ -88,13 +88,7 @@ useHead({
             rel="noopener noreferrer"
             target="_blank"
           >
-            <svg
-              class="size-4"
-              fill="currentColor"
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg class="size-4" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
               />
@@ -107,17 +101,13 @@ useHead({
       </div>
     </div>
     <div class="flex flex-col items-center justify-center py-8 px-2 lg:px-0">
-      <h1
-        class="flex flex-col sm:flex-row items-center gap-4 text-(--color-pink) text-center sm:text-left"
-      >
+      <h1 class="flex flex-col sm:flex-row items-center gap-4 text-(--color-pink) text-center sm:text-left">
         <span class="text-6xl md:text-8xl font-bold">5</span>
         <span class="text-3xl md:text-4xl leading-tight"> gute Gründe<br />für Tempo 30 </span>
       </h1>
       <section class="w-full max-w-295 flex flex-col items-center px-2 lg:px-0">
         <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
-          <h2
-            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
-          >
+          <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
               class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >1</span
@@ -132,17 +122,14 @@ useHead({
             src="/01.webp"
           />
           <p>
-            Die Europäische Umweltagentur schätzt, dass jährlich 12.000 vorzeitige Todesfälle und
-            rund 50.000 Herz-Kreislauf-Erkrankungen durch Lärm verursacht werden.<sup
+            Die Europäische Umweltagentur schätzt, dass jährlich 12.000 vorzeitige Todesfälle und rund 50.000
+            Herz-Kreislauf-Erkrankungen durch Lärm verursacht werden.<sup
               ><span class="text-(--color-pink) font-bold">1 </span></sup
-            >Eine Lärmreduktion an der Luxemburger Straße ist durch Tempo 30 schnell und günstig
-            möglich.
+            >Eine Lärmreduktion an der Luxemburger Straße ist durch Tempo 30 schnell und günstig möglich.
           </p>
         </section>
         <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
-          <h2
-            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
-          >
+          <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
               class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >2</span
@@ -157,24 +144,20 @@ useHead({
             src="/02.webp"
           />
           <p>
-            Tempo 30 sorgt für mehr Sicherheit. Nach der Einführung von Tempo 30 an den Kölner
-            Ringen ging die Anzahl an Unfällen mit Personenschaden um 28 % zurück. Die Unfälle mit
-            schwer- verletzten Personen sanken um 47 %.<sup
+            Tempo 30 sorgt für mehr Sicherheit. Nach der Einführung von Tempo 30 an den Kölner Ringen ging die Anzahl an
+            Unfällen mit Personenschaden um 28 % zurück. Die Unfälle mit schwer- verletzten Personen sanken um 47 %.<sup
               ><span class="text-(--color-pink) font-bold">2</span></sup
             >
           </p>
         </section>
         <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
-          <h2
-            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
-          >
+          <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
               class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >3</span
             >
             <span class="text-xl sm:text-2xl leading-tight">
-              Bei Tempo 30 ist die Überlebenschance von Zufußgehenden bei einer Kollision durch ein
-              Auto viermal höher.
+              Bei Tempo 30 ist die Überlebenschance von Zufußgehenden bei einer Kollision durch ein Auto viermal höher.
             </span>
           </h2>
           <img
@@ -184,9 +167,7 @@ useHead({
           />
         </section>
         <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
-          <h2
-            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
-          >
+          <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
               class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >4</span
@@ -196,11 +177,10 @@ useHead({
             </span>
           </h2>
           <p>
-            Weniger Lärm, bessere Luft, mehr Verkehrssicherheit: Tempo 30 sorgt dafür, dass wir uns
-            lieber draußen aufhalten. Sichere Wege zu Fuß und mit dem Rad zurückzulegen und auf
-            schönen Außenterrassen der Gastronomie zu sitzen, stärkt die Nachbarschaft. Dies sorgt
-            für ein belebteres Umfeld, wovon gerade auch der Einzelhandel und Gewerbe- treibende
-            profitieren.
+            Weniger Lärm, bessere Luft, mehr Verkehrssicherheit: Tempo 30 sorgt dafür, dass wir uns lieber draußen
+            aufhalten. Sichere Wege zu Fuß und mit dem Rad zurückzulegen und auf schönen Außenterrassen der Gastronomie
+            zu sitzen, stärkt die Nachbarschaft. Dies sorgt für ein belebteres Umfeld, wovon gerade auch der
+            Einzelhandel und Gewerbe- treibende profitieren.
           </p>
           <img
             alt="Bild mit der Information das die Zeit die Kinder (5 bis 7 Jahre) ohne Aufsicht im Umfeld des Wohnorts draußen spielen, bei Tempo 50 (Durchgangsverkehr) sind es 32 Minuten, bei Tempo 30 (Durchgangsverkehr) sind es 53 Minuten und bei Tempo 30 (Verkehrsberuhigt) sind es 66 Minuten."
@@ -209,27 +189,24 @@ useHead({
           />
         </section>
         <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
-          <h2
-            class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4"
-          >
+          <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
               class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
               >5</span
             >
             <span class="text-xl sm:text-2xl leading-tight">
-              Tempo 30 reduziert die Luftschadstoffbelastung, wenn die Qualität des Verkehrsflusses
-              beibehalten oder verbessert wird.
+              Tempo 30 reduziert die Luftschadstoffbelastung, wenn die Qualität des Verkehrsflusses beibehalten oder
+              verbessert wird.
             </span>
           </h2>
           <p>
-            Der Gürtel ist nach wie vor stark luftverschmutzt. Erst seit Kurzem werden die
-            Grenzwerte der Luftreinhaltung auf der Luxemburger Straße knapp eingehalten.
-            Voraussichtlich werden auf EU-Ebene die Grenzwerte im Jahr 2030 erheblich verschärft.
-            Eine Strategie, wie diese neuen Werte eingehalten werden sollen, fehlt bislang. Tempo 30
-            trägt auch zu einer besseren Luftreinhaltung bei, wie beispielsweise ein Reallabor im
-            Jahr 2021 in der Essener Alfredstraße gezeigt hat. Die Ampeln der Lux wurden 2019
-            modernisiert, weshalb diese auf optimalen Verkehrsfluß für Tempo 30 umprogrammiert
-            werden können. Die Stadtbahn kann weiterhin schneller fahren.
+            Der Gürtel ist nach wie vor stark luftverschmutzt. Erst seit Kurzem werden die Grenzwerte der
+            Luftreinhaltung auf der Luxemburger Straße knapp eingehalten. Voraussichtlich werden auf EU-Ebene die
+            Grenzwerte im Jahr 2030 erheblich verschärft. Eine Strategie, wie diese neuen Werte eingehalten werden
+            sollen, fehlt bislang. Tempo 30 trägt auch zu einer besseren Luftreinhaltung bei, wie beispielsweise ein
+            Reallabor im Jahr 2021 in der Essener Alfredstraße gezeigt hat. Die Ampeln der Lux wurden 2019 modernisiert,
+            weshalb diese auf optimalen Verkehrsfluß für Tempo 30 umprogrammiert werden können. Die Stadtbahn kann
+            weiterhin schneller fahren.
           </p>
           <img
             alt="Bild mit der Information der Auswertungen an drei Berliner Hauptverkehrsstraßen: Tempo 30 sorgt für bessere Luft."
@@ -250,8 +227,8 @@ useHead({
             >
           </p>
           <p>
-            <span class="text-(--color-pink) font-bold">2</span> Deutscher Verkehrssicherheitsrat
-            (DVR), Beispielsammlung Innenstadtringe, Köln
+            <span class="text-(--color-pink) font-bold">2</span> Deutscher Verkehrssicherheitsrat (DVR),
+            Beispielsammlung Innenstadtringe, Köln
             <a
               class="text-(--color-blue) hover:underline"
               href="https://www.dvr.de/themen/verkehrsinfrastruktur/beispielsammlung-gute-strassen-in-stadt-und-dorf/koeln-innenstadtringe"
@@ -261,12 +238,12 @@ useHead({
             >
           </p>
           <p>
-            <span class="text-(--color-pink) font-bold">3</span> OECD/ECMT Transport Research
-            Centre: Speed Management report, Paris 2006
+            <span class="text-(--color-pink) font-bold">3</span> OECD/ECMT Transport Research Centre: Speed Management
+            report, Paris 2006
           </p>
           <p>
-            <span class="text-(--color-pink) font-bold">4</span> Peter Höfflin, Die Qualitäten
-            urbaner Räume und deren Bedeutung für die Entwicklung von Kindern, 2019
+            <span class="text-(--color-pink) font-bold">4</span> Peter Höfflin, Die Qualitäten urbaner Räume und deren
+            Bedeutung für die Entwicklung von Kindern, 2019
             <a
               class="text-(--color-blue) hover:underline"
               href="https://www.vhw.de/fileadmin/user_upload/08_publikationen/verbandszeitschrift/FWS/2019/1_2019/FWS_1_19_Hoefflin.pdf"
@@ -276,8 +253,8 @@ useHead({
             >
           </p>
           <p>
-            <span class="text-(--color-pink) font-bold">5</span> Umweltbundesamt (UBA) (2016).
-            „Wirkungen von Tempo 30 an Hauptverkehrsstraßen", Seite 14f
+            <span class="text-(--color-pink) font-bold">5</span> Umweltbundesamt (UBA) (2016). „Wirkungen von Tempo 30
+            an Hauptverkehrsstraßen", Seite 14f
             <a
               class="text-(--color-blue) hover:underline"
               href="https://www.umweltbundesamt.de/sites/default/files/medien/2546/publikationen/wirkungen_von_tempo_30_an_hauptstrassen.pdf"
@@ -376,6 +353,7 @@ useHead({
   color: var(--color-blue);
   font-weight: 600;
   text-decoration: none;
+  vertical-align: bottom;
 }
 
 .cta-note__link:hover {
