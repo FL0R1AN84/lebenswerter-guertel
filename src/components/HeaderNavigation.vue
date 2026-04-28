@@ -50,7 +50,8 @@ onUnmounted(() => {
   transition: color 0.3s;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link--active {
   color: var(--color-blue);
 }
 
