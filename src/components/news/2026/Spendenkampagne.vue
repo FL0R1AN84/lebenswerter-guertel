@@ -16,8 +16,8 @@ export default { name: 'SpendenkampagneNews' }
 
     <div class="news-card__body">
       <p>
-        Der Kölner Gürtel ist eine der lautesten Straßen der Stadt: Anwohnende sind Lärmpegeln von bis zu 75 dB
-        tagsüber und 65 dB nachts ausgesetzt – Werte, die die Gesundheit ernsthaft gefährden.
+        Der Kölner Gürtel ist eine der lautesten Straßen der Stadt: Anwohnende sind Lärmpegeln von bis zu 75 dB tagsüber
+        und 65 dB nachts ausgesetzt – Werte, die die Gesundheit ernsthaft gefährden.
       </p>
       <p>
         Trotz eines Antrags auf lärmreduzierende Maßnahmen vor zwei Jahren hat die Stadt Köln bisher nicht gehandelt.
@@ -37,10 +37,10 @@ export default { name: 'SpendenkampagneNews' }
 
       <div class="news-card__cta">
         <a
+          class="news-card__cta-link"
           href="https://www.goodcrowd.org/laermschutz-auf-dem-guertel-einklagen"
           rel="noopener noreferrer"
           target="_blank"
-          class="news-card__cta-link"
         >
           Jetzt spenden →
         </a>
@@ -85,7 +85,7 @@ export default { name: 'SpendenkampagneNews' }
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background-color: var(--color-green);
+  background-color: var(--color-pink);
   color: white;
   padding: 0.15rem 0.6rem;
   border-radius: 999px;
@@ -118,7 +118,7 @@ export default { name: 'SpendenkampagneNews' }
 
 .news-card__cta-link {
   display: inline-block;
-  background-color: var(--color-green);
+  background-color: var(--color-blue);
   color: white;
   font-weight: 700;
   padding: 0.65rem 1.5rem;
@@ -128,7 +128,7 @@ export default { name: 'SpendenkampagneNews' }
 }
 
 .news-card__cta-link:hover {
-  background-color: var(--color-blue);
+  background-color: var(--color-green);
 }
 
 .news-card__about-heading {
@@ -144,5 +144,3 @@ export default { name: 'SpendenkampagneNews' }
   color: var(--color-green);
 }
 </style>
-
-
