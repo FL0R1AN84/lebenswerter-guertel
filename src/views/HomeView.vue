@@ -113,7 +113,7 @@ useHead({
               >1</span
             >
             <span class="text-xl sm:text-2xl leading-tight">
-              Tempo 30 senkt den wahrgenommenen Verkehrslärm gegen über Tempo 50 um die Hälfte.
+              Tempo 30 senkt den wahrgenommenen Verkehrslärm gegenüber Tempo 50 um die Hälfte.
             </span>
           </h2>
           <img
