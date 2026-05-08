@@ -1,9 +1,29 @@
 # lebenswerter-guertel
 
-![Website](docs/assets/01.webp)
-
 A modern, single-page web application built with Vue 3 and TypeScript, serving as the online presence for the
-*Lebenswerter Gürtel* initiative.
+*Lebenswerter Gürtel* initiative — a citizens' initiative advocating for Tempo 30 on the Kölner Gürtel.
+
+---
+
+## Screenshots
+
+### Homepage
+
+|                         Light Mode                         |                        Dark Mode                         |
+|:----------------------------------------------------------:|:--------------------------------------------------------:|
+| ![Homepage – Light](docs/assets/screenshot-home-light.png) | ![Homepage – Dark](docs/assets/screenshot-home-dark.png) |
+
+### Aktuelles (News)
+
+|                         Light Mode                          |                         Dark Mode                         |
+|:-----------------------------------------------------------:|:---------------------------------------------------------:|
+| ![Aktuelles – Light](docs/assets/screenshot-news-light.png) | ![Aktuelles – Dark](docs/assets/screenshot-news-dark.png) |
+
+### Antrag
+
+|                         Light Mode                         |                        Dark Mode                         |
+|:----------------------------------------------------------:|:--------------------------------------------------------:|
+| ![Antrag – Light](docs/assets/screenshot-antrag-light.png) | ![Antrag – Dark](docs/assets/screenshot-antrag-dark.png) |
 
 ---
 
