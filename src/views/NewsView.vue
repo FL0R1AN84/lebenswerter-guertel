@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
 import KlageKSTA from '@/components/news/2026/KlageKSTA.vue'
+import SpeedDriverKSTA from '@/components/news/2026/SpeedDriverKSTA.vue'
 import Spendenkampagne from '@/components/news/2026/Spendenkampagne.vue'
 import IGGruendung from '@/components/news/2026/IGGruendung.vue'
 import { useHead } from '@unhead/vue'
@@ -13,7 +14,11 @@ useHead({
       content:
         'Aktuelle Pressemitteilungen und Neuigkeiten der Initiative „IG Lebenswerter Gürtel" – gegründet von Anwohnenden des Kölner Gürtels im Kampf gegen Verkehrslärm.',
     },
-    { name: 'keywords', content: 'IG Lebenswerter Gürtel, Aktuelles, Pressemitteilung, Gründung, Untätigkeitsklage, Köln, Gürtel, Tempo 30' },
+    {
+      name: 'keywords',
+      content:
+        'IG Lebenswerter Gürtel, Aktuelles, Pressemitteilung, Gründung, Untätigkeitsklage, Köln, Gürtel, Tempo 30',
+    },
     { property: 'og:title', content: 'Aktuelles – IG Lebenswerter Gürtel' },
     {
       property: 'og:description',
@@ -42,6 +47,7 @@ useHead({
       <section class="news-year-group">
         <h2 class="news-year-heading">2026</h2>
         <KlageKSTA />
+        <SpeedDriverKSTA />
         <Spendenkampagne />
         <IGGruendung />
       </section>
