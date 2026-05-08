@@ -48,6 +48,14 @@ useHead({
       <h3 class="text-2xl md:text-4xl font-bold text-white py-8 px-2 lg:px-0 text-center">
         Jetzt machen wir den Gürtel wieder lebenswert!
       </h3>
+      <a
+        class="donate-button"
+        href="https://www.goodcrowd.org/laermschutz-auf-dem-guertel-einklagen"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Jetzt spenden ♥︎
+      </a>
     </div>
     <div class="cta-banner">
       <div class="cta-banner__inner">
@@ -280,6 +288,28 @@ useHead({
 </template>
 
 <style scoped>
+.donate-button {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+  padding: 0.85rem 2rem;
+  background-color: var(--color-pink);
+  color: white;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition:
+    background-color 0.2s,
+    transform 0.2s;
+}
+
+.donate-button:hover {
+  background-color: white;
+  color: var(--color-pink);
+  transform: scale(1.04);
+}
+
 .cta-banner {
   background-color: color-mix(in srgb, var(--color-green) 12%, transparent);
   border-top: 3px solid var(--color-green);
