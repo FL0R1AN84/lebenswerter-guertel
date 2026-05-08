@@ -44,6 +44,10 @@ onUnmounted(() => {
 
 <style scoped>
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 4px 6px;
   color: var(--color-green);
   text-decoration: none;
   font-weight: 600;
@@ -51,6 +55,7 @@ onUnmounted(() => {
 }
 
 .nav-link:hover,
+/* noinspection CssUnusedSymbol */
 .nav-link--active {
   color: var(--color-blue);
 }

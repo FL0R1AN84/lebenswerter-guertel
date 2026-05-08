@@ -29,11 +29,10 @@ defineProps<{
   transition: all 0.3s ease;
 }
 
-@media (max-width: 640px) {
-  .heart-container--small {
-    width: clamp(40px, 10vw, 60px);
-    height: clamp(40px, 10vw, 60px);
-  }
+/* noinspection CssUnusedSymbol */
+.heart-container--small {
+  width: clamp(40px, 10vw, 60px);
+  height: clamp(40px, 10vw, 60px);
 }
 
 .heart {

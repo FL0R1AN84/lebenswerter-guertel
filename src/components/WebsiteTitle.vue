@@ -20,10 +20,9 @@ defineProps<{
   transition: font-size 0.3s ease;
 }
 
-@media (max-width: 640px) {
-  .website-title--small {
-    font-size: clamp(1rem, 5vw, 2rem);
-  }
+/* noinspection CssUnusedSymbol */
+.website-title--small {
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
 @media (prefers-color-scheme: dark) {
