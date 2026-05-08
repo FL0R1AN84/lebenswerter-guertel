@@ -2,21 +2,23 @@
   <article class="news-card shadow-md dark:shadow-md dark:shadow-neutral-800/50">
     <header class="news-card__header">
       <span class="news-card__date">
-        <time datetime="2026-05-07">07. Mai 2026</time>
+        <time datetime="2026-05-07">03. Mai 2026</time>
       </span>
       <span class="news-card__tag">Presseübersicht</span>
     </header>
 
-    <h2 class="news-card__title">Lärm in Lindenthal: Nachbarn wollen Tempo 30 per Klage durchsetzen</h2>
+    <h2 class="news-card__title">Autofahrer mit 203 km/h in der 50er-Zone erwischt</h2>
 
     <div class="news-card__body">
       <p>
-        Die Interessengemeinschaft lebenswerter Gürtel wird ihrer Forderung nach Tempo 30 Nachdruck verleihen. Sie will
-        die Stadt verklagen. Wegen Untätigkeit.
+        Auf dem Raderthalgürtel wurde ein Autofahrer mit 203 km/h in einer 50er-Zone geblitzt. Das berichtet der Kölner
+        Stadt-Anzeiger. Dieser Vorfall unterstreicht die Gefahren von überhöhter Geschwindigkeit, insbesondere in
+        städtischen Gebieten, und die Notwendigkeit, die Verkehrsregeln einzuhalten, um die Sicherheit aller
+        Verkehrsteilnehmer zu gewährleisten.
       </p>
       <a
         class="news-card__link"
-        href="https://www.ksta.de/koeln/lindenthal/lindenthal-veedel/laerm-in-lindenthal-nachbarn-wollen-tempo-30-per-klage-durchsetzen-1275415"
+        href="https://www.ksta.de/koeln/koelns-ruecksichtslose-raser-mit-203-km-h-in-der-50er-zone-1274459"
         rel="noopener noreferrer"
         target="_blank"
       >
