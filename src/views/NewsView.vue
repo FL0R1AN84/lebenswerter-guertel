@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import HeaderNavigation from '@/components/HeaderNavigation.vue'
+import KlageKSTA from '@/components/news/2026/KlageKSTA.vue'
 import Spendenkampagne from '@/components/news/2026/Spendenkampagne.vue'
 import IGGruendung from '@/components/news/2026/IGGruendung.vue'
 import { useHead } from '@unhead/vue'
@@ -40,6 +41,7 @@ useHead({
 
       <section class="news-year-group">
         <h2 class="news-year-heading">2026</h2>
+        <KlageKSTA />
         <Spendenkampagne />
         <IGGruendung />
       </section>
