@@ -17,10 +17,10 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
-    "@tailwindcss/vite": "4.3.0",
+    "@tailwindcss/vite": "4.3.1",
     "@unhead/vue": "3.1.4",
     "pinia": "3.0.4",
-    "tailwindcss": "4.3.0",
+    "tailwindcss": "4.3.1",
     "vue": "3.5.33",
     "vue-router": "5.0.6"
   },
