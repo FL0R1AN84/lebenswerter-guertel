@@ -1,6 +1,7 @@
 # AGENTS.md — AI Agent Guide for lebenswerter-guertel
 
-A modern Vue 3 + TypeScript SPA for IG Lebenswerter Gürtel, a citizens' initiative advocating for Tempo 30 on Cologne's Gürtel.
+A modern Vue 3 + TypeScript SPA for IG Lebenswerter Gürtel, a citizens' initiative advocating for Tempo 30 on Cologne's
+Gürtel.
 
 ## Project at a Glance
 
@@ -19,7 +20,6 @@ src/
 ├── views/              # Route-level components (5 routes defined in router/index.ts)
 ├── components/         # Reusable Vue SFCs
 │   ├── news/2026/      # Year-organized news posts (IGGruendung, KlageKSTA, etc.)
-│   ├── aktuelles/2026/ # ⚠️ Empty placeholder — do NOT use; place posts in news/2026/ instead
 │   ├── icons/          # SVG icon components
 │   └── __tests__/      # Vitest specs co-located
 ├── router/index.ts     # Vue Router config (scroll behavior with header offset)
@@ -27,17 +27,18 @@ src/
 └── assets/             # Global CSS (variables.css, base.css, main.css imports Tailwind)
 ```
 
-**Path alias:** `@` resolves to `src/` (configured in `vite.config.ts`). Use `@/components/...` for all cross-directory imports.
+**Path alias:** `@` resolves to `src/` (configured in `vite.config.ts`). Use `@/components/...` for all cross-directory
+imports.
 
 ### Routes & Views
 
-| Path | Component | Notes |
-|------|-----------|-------|
-| `/` | `HomeView.vue` | Hero, 5 reasons for Tempo 30, donation CTA |
-| `/aktuelles` | `NewsView.vue` | Lists news posts by year (imported in view) |
-| `/kontakt` | `ContactView.vue` | Contact form + FooterNav |
-| `/datenschutz` | `PrivacyPolicyView.vue` | Privacy policy |
-| `/antrag` | `AntragView.vue` | Application form page |
+| Path           | Component               | Notes                                       |
+|----------------|-------------------------|---------------------------------------------|
+| `/`            | `HomeView.vue`          | Hero, 5 reasons for Tempo 30, donation CTA  |
+| `/aktuelles`   | `NewsView.vue`          | Lists news posts by year (imported in view) |
+| `/kontakt`     | `ContactView.vue`       | Contact form + FooterNav                    |
+| `/datenschutz` | `PrivacyPolicyView.vue` | Privacy policy                              |
+| `/antrag`      | `AntragView.vue`        | Application form page                       |
 
 **Key Pattern:** Router has custom `scrollBehavior` that respects `<header>` height for hash navigation.
 
@@ -48,10 +49,10 @@ src/
 1. `ContactForm.vue` validates locally (name, email format, message length ≥10 chars)
 2. On submit: POST JSON to `/api/contact.php` with `{name, email, phone?, message}`
 3. Backend (`api/contact.php`):
-   - Loads env vars: `CONTACT_EMAIL` (destination), `FROM_EMAIL` (from header)
-   - Sanitizes input with `strip_tags()`
-   - Sends via PHP `mail()` function
-   - Returns JSON response (`{"message": "..."}`) with HTTP status
+    - Loads env vars: `CONTACT_EMAIL` (destination), `FROM_EMAIL` (from header)
+    - Sanitizes input with `strip_tags()`
+    - Sends via PHP `mail()` function
+    - Returns JSON response (`{"message": "..."}`) with HTTP status
 
 **Testing Pattern:** ContactForm.spec.ts mocks fetch with Vitest, tests validation + async submission states.
 
@@ -60,17 +61,20 @@ src/
 ### Colors (CSS Variables)
 
 ```css
---color-blue:  #009ee3  /* Primary */
---color-green: #74b828  /* Accent */
---color-pink:  #d8127e  /* Highlight/Error */
---color-dark:  #181818  /* Dark mode */
+--color-blue: #009ee3 /* Primary */
+--color-green: #74b828 /* Accent */
+--color-pink: #d8127e /* Highlight/Error */
+--color-dark: #181818
+
+/* Dark mode */
 ```
 
 ### Tailwind + Scoped CSS Pattern
 
 - `main.css` imports Tailwind via `@import "tailwindcss"`
 - Components use **scoped `<style>`** for component-specific classes (e.g., `.contact-form`, `.home-section`)
-- Tailwind utilities + CSS custom properties combined (e.g., `text-(--color-pink)`, `bg-linear-to-br from-(--color-blue)`)
+- Tailwind utilities + CSS custom properties combined (e.g., `text-(--color-pink)`,
+  `bg-linear-to-br from-(--color-blue)`)
 - Dark mode support via Tailwind's `dark:` prefix
 
 ## TypeScript & Type Safety
@@ -91,12 +95,13 @@ src/
 - Timers: `vi.useFakeTimers()` for testing delays (success/error message hiding)
 
 Example (ContactForm.spec.ts):
+
 ```typescript
 const fillField = async (wrapper, id: string, value: string) => {
-  await wrapper.find(`#${id}`).setValue(value)
+    await wrapper.find(`#${id}`).setValue(value)
 }
 const submitForm = async (wrapper) => {
-  await wrapper.find('form').trigger('submit')
+    await wrapper.find('form').trigger('submit')
 }
 ```
 
@@ -128,6 +133,7 @@ npm run test:e2e:dev          # Interactive Cypress against dev server
 ### Vite Plugins
 
 Active plugins in `vite.config.ts` (order matters):
+
 - `@tailwindcss/vite` — Tailwind CSS v4, no PostCSS config required
 - `@vitejs/plugin-vue` — `.vue` SFC support
 - `@vitejs/plugin-vue-jsx` — JSX/TSX support
@@ -164,21 +170,24 @@ npm run type-check            # vue-tsc --build (called in build)
   </article>
   ```
 
-**Adding a post:** Create `.vue` in year folder, import in `NewsView.vue`, add to appropriate `<section class="news-year-group">`.
+**Adding a post:** Create `.vue` in year folder, import in `NewsView.vue`, add to appropriate
+`<section class="news-year-group">`.
 
 ### SEO & Head Management
 
 **Tool:** `@unhead/vue` (imported in `main.ts`)
 
 **Pattern:** Use `useHead()` in each view to set:
+
 - `title`, `meta` (description, keywords, og:*, twitter:*)
 - Locale: `og:locale: 'de_DE'`
 
 Example (HomeView.vue):
+
 ```typescript
 useHead({
-  title: 'IG Lebenswerter Gürtel – Tempo 30 für den Kölner Gürtel',
-  meta: [{ name: 'description', content: '...' }, ...]
+    title: 'IG Lebenswerter Gürtel – Tempo 30 für den Kölner Gürtel',
+    meta: [{name: 'description', content: '...'}, ...]
 })
 ```
 
@@ -205,6 +214,7 @@ See `ContactForm.vue` for canonical example.
 ### Environment Variables
 
 Backend (PHP) needs:
+
 - `CONTACT_EMAIL` — destination email
 - `FROM_EMAIL` — sender email
 
@@ -219,12 +229,15 @@ Loaded via `Dotenv\Dotenv` in `api/contact.php` (vendor/autoload required).
 
 ### Dependency Management & CI
 
-- **Renovate** (`renovate.json`) targets the `develop` branch and opens PRs for all dependency updates with automerge enabled.
-- **GitHub Actions gate PRs:** `vitest.yml` (runs Vitest unit tests) and `build.yml` (installs deps + builds) must pass before automerge. No dependency update merges unless tests pass and the build succeeds.
+- **Renovate** (`renovate.json`) targets the `develop` branch and opens PRs for all dependency updates with automerge
+  enabled.
+- **GitHub Actions gate PRs:** `vitest.yml` (runs Vitest unit tests) and `build.yml` (installs deps + builds) must pass
+  before automerge. No dependency update merges unless tests pass and the build succeeds.
 
 ## Key Dependencies & Versions
 
 See `package.json` for current versions:
+
 - `vue@3.5.33`, `vue-router@5.0.6`, `pinia@3.0.4`
 - `vite@8.1.5`, `tailwindcss@4.3.3`, `@tailwindcss/vite@4.3.3`
 - `@unhead/vue@3.2.3` (SEO/head management)
