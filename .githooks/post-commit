@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+[ -n "${LG_VERSION_BUMP:-}" ] && exit 0
+if git diff-tree --root --no-commit-id -p -r HEAD -- package.json | grep -Eq '^[+-][[:space:]]*"version"'; then
+  exit 0
+fi
+
+MESSAGE_FILE=$(mktemp)
+trap 'rm -f "$MESSAGE_FILE"' EXIT
+git log -1 --format=%B > "$MESSAGE_FILE"
+node scripts/bump-version.mjs "$MESSAGE_FILE"
+
+if ! git diff --quiet -- package.json; then
+  git add -- package.json
+  LG_VERSION_BUMP=1 git commit --amend --no-edit --no-verify -q
+fi

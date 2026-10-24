@@ -122,6 +122,11 @@ npm run build                 # Type-check + vite build (dist/)
 npm run preview               # Preview built dist/ @ localhost:4173
 ```
 
+`npm install` enables the `.githooks/post-commit` hook. Conventional commits automatically bump
+`package.json`: `feat` increments the minor version; other conventional types increment the patch
+version. Merge, revert, and non-conventional commits are skipped. The hook amends the bump into
+the original commit.
+
 ### Testing
 
 ```bash
@@ -233,6 +238,9 @@ Loaded via `Dotenv\Dotenv` in `api/contact.php` (vendor/autoload required).
   enabled.
 - **GitHub Actions gate PRs:** `vitest.yml` (runs Vitest unit tests) and `build.yml` (installs deps + builds) must pass
   before automerge. No dependency update merges unless tests pass and the build succeeds.
+- **PR metadata:** `pr-metadata.yml` updates PR titles to `Version: <package.json version>` and builds the
+  description from the PR's commit messages for PRs targeting `main` or `develop`. It runs on each push and
+  overwrites manual edits to the title or description.
 
 ## Key Dependencies & Versions
 
@@ -252,4 +260,3 @@ See `package.json` for current versions:
 4. **Fix test:** Update `vitest.config.ts` if needed (jsdom, plugin config); ensure mocks match expected API
 5. **Type safety:** Run `npm run type-check` before commit; strict mode catches many errors
 6. **Language:** Keep all strings in German; if uncertain, check existing components
-
