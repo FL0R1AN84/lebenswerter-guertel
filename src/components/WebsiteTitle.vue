@@ -10,24 +10,28 @@ defineProps<{
 
 <style scoped>
 .website-title {
-  font-size: clamp(1.5rem, 8vw, 3.5rem);
-  font-weight: 700;
+  font-size: clamp(var(--font-size-xl), var(--font-size-title-fluid), var(--font-size-display-max));
+  font-weight: var(--font-weight-bold);
   color: var(--color-dark);
   margin: 0;
-  animation: fadeInScale 1s ease-out;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  letter-spacing: 2px;
-  transition: font-size 0.3s ease;
+  animation: fadeInScale var(--duration-title-animation) ease-out;
+  text-shadow: var(--shadow-text);
+  letter-spacing: var(--letter-spacing-title);
+  transition: font-size var(--duration-default) var(--ease-standard);
 }
 
 /* noinspection CssUnusedSymbol */
 .website-title--small {
-  font-size: clamp(1rem, 5vw, 2rem);
+  font-size: clamp(
+    var(--font-size-base),
+    var(--font-size-title-small-fluid),
+    var(--font-size-display-small-max)
+  );
 }
 
 @media (prefers-color-scheme: dark) {
   .website-title {
-    color: white;
+    color: var(--color-white);
   }
 }
 

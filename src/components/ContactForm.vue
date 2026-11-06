@@ -229,52 +229,52 @@ const handleSubmit = async () => {
 
 <style scoped>
 .contact-form {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 8px;
+  max-width: var(--size-form);
+  margin: var(--space-8) auto;
+  padding: var(--space-8);
+  border-radius: var(--radius-card);
 }
 
 .success-message {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  color: #fff;
-  background: linear-gradient(135deg, var(--color-green) 0%, #5a9020 100%);
-  border-radius: 4px;
-  font-weight: 600;
+  margin-bottom: var(--space-4);
+  padding: var(--space-4);
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-green) 0%, var(--color-green-dark) 100%);
+  border-radius: var(--radius-medium);
+  font-weight: var(--font-weight-semibold);
 }
 
 .error-message {
-  margin-top: 0.5rem;
+  margin-top: var(--space-2);
   color: var(--color-pink);
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
 }
 
 .form-group .error-message {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
   color: var(--color-pink);
 }
 
 div.error-message[role='alert'] {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-4);
   margin-top: 0;
-  padding: 1rem;
-  color: #fff;
-  background: linear-gradient(135deg, var(--color-pink) 0%, #a00060 100%);
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 600;
+  padding: var(--space-4);
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-pink) 0%, var(--color-pink-dark) 100%);
+  border-radius: var(--radius-medium);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-6);
 }
 
 .form-label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  margin-bottom: var(--space-2);
+  font-weight: var(--font-weight-semibold);
 }
 
 .required {
@@ -283,23 +283,23 @@ div.error-message[role='alert'] {
 
 .form-input {
   width: 100%;
-  padding: 0.75rem;
-  border: 2px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: var(--space-3);
+  border: var(--border-width-medium) solid var(--color-neutral-300);
+  border-radius: var(--radius-medium);
+  font-size: var(--font-size-base);
   font-family: inherit;
-  transition: border-color 0.3s;
+  transition: border-color var(--duration-default);
 }
 
 .form-input:focus {
   outline: none;
   border-color: var(--color-blue);
-  box-shadow: 0 0 0 3px rgba(0, 158, 227, 0.1);
+  box-shadow: 0 0 0 var(--border-width-accent) var(--color-blue-focus);
 }
 
 .form-input[aria-invalid='true'] {
   border-color: var(--color-pink);
-  box-shadow: 0 0 0 3px rgba(216, 18, 126, 0.1);
+  box-shadow: 0 0 0 var(--border-width-accent) var(--color-pink-focus);
 }
 
 .form-textarea {
@@ -308,14 +308,14 @@ div.error-message[role='alert'] {
 
 .submit-button {
   width: 100%;
-  padding: 0.75rem 1.5rem;
+  padding: var(--space-3) var(--space-6);
   background: linear-gradient(135deg, var(--color-blue) 0%, var(--color-green) 100%);
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  font-weight: 600;
+  border-radius: var(--radius-medium);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: opacity var(--duration-default);
 }
 
 .submit-button:hover {
@@ -323,8 +323,8 @@ div.error-message[role='alert'] {
 }
 
 .submit-button:focus {
-  outline: 3px solid var(--color-blue);
-  outline-offset: 2px;
+  outline: var(--border-width-accent) solid var(--color-blue);
+  outline-offset: var(--space-1);
 }
 
 .submit-button:active {

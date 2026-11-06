@@ -57,42 +57,42 @@ useHead({
 
 <style scoped>
 .news-container {
-  min-height: calc(100vh - 200px);
-  padding: 1rem;
+  min-height: calc(var(--size-viewport-min) - var(--size-footer-reserved));
+  padding: var(--space-4);
 }
 
 .news-content {
-  max-width: 800px;
+  max-width: var(--size-content);
   margin: 0 auto;
 }
 
 .news-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
   color: var(--color-blue);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
   text-align: center;
 }
 
 .news-year-group {
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-12);
 }
 
 .news-year-heading {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: var(--font-size-heading-mobile);
+  font-weight: var(--font-weight-bold);
   color: var(--color-green);
-  padding-bottom: 0.5rem;
-  margin-bottom: 1.5rem;
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-6);
 }
 
 @media (max-width: 768px) {
   .news-container {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 
   .news-title {
-    font-size: 1.75rem;
+    font-size: var(--font-size-heading-mobile);
   }
 }
 </style>

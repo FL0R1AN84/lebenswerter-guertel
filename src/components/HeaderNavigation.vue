@@ -23,7 +23,7 @@ onUnmounted(() => {
 <template>
   <header
     :class="[
-      'sticky top-0 z-50 flex flex-col items-center justify-center bg-white dark:bg-(--color-dark) shadow-md px-4 transition-all duration-300',
+      'sticky top-0 z-50 flex flex-col items-center justify-center bg-(--color-white) dark:bg-(--color-dark) site-header-shadow px-4 transition-all duration-300',
       isScrolled ? 'py-2' : 'py-8',
     ]"
   >
@@ -46,12 +46,12 @@ onUnmounted(() => {
 .nav-link {
   display: inline-flex;
   align-items: center;
-  min-height: 24px;
-  padding: 4px 6px;
+  min-height: var(--size-nav-link-height);
+  padding: var(--space-1) var(--space-2);
   color: var(--color-green);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
+  font-weight: var(--font-weight-semibold);
+  transition: color var(--duration-default);
 }
 
 .nav-link:hover,
@@ -61,8 +61,8 @@ onUnmounted(() => {
 }
 
 .nav-link:focus {
-  outline: 2px solid var(--color-blue);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline: var(--border-width-medium) solid var(--color-blue);
+  outline-offset: var(--space-1);
+  border-radius: var(--radius-small);
 }
 </style>

@@ -31,7 +31,7 @@ useHead({
     <section class="antrag-content">
       <h1 class="antrag-title">Antrag auf Lärmschutz</h1>
 
-      <section class="antrag-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section class="antrag-section surface-shadow">
         <h2>Jetzt selbst aktiv werden!</h2>
         <p>
           Als Anwohnerin oder Anwohner des Kölner Gürtels haben Sie das Recht, einen formellen Antrag auf Verkehrslärm
@@ -90,7 +90,7 @@ useHead({
         </div>
       </section>
 
-      <section class="antrag-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section class="antrag-section surface-shadow">
         <h2>Antrag auf Verkehrslärm reduzierende Maßnahmen</h2>
         <p class="antrag-meta">nach § 45 Abs. 1 S. 2 Nr. 3 StVO auf dem [___]gürtel in Köln</p>
 
@@ -135,9 +135,9 @@ useHead({
           </p>
 
           <p>
-            Ich wohne am <span class="fill-in" style="min-width: 10rem;"></span>gürtel, Hausnummer
-            <span class="fill-in" style="min-width: 3rem;"></span>, Etage
-            <span class="fill-in" style="min-width: 2rem;"></span>
+            Ich wohne am <span class="fill-in" style="min-width: var(--size-fill-long);"></span>gürtel, Hausnummer
+            <span class="fill-in" style="min-width: var(--size-fill-medium);"></span>, Etage
+            <span class="fill-in" style="min-width: var(--size-fill-short);"></span>
           </p>
 
           <p>
@@ -166,7 +166,7 @@ useHead({
         </div>
       </section>
 
-      <section class="antrag-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section class="antrag-section surface-shadow">
         <h2>So gehen Sie vor</h2>
         <ul class="steps-list">
           <li><strong>PDF herunterladen oder öffnen</strong> – Laden Sie das Antragsformular herunter oder öffnen Sie es direkt im Browser.</li>
@@ -191,65 +191,65 @@ useHead({
 
 <style scoped>
 .antrag-container {
-  min-height: calc(100vh - 200px);
-  padding: 1rem;
+  min-height: calc(var(--size-viewport-min) - var(--size-footer-reserved));
+  padding: var(--space-4);
 }
 
 .antrag-content {
-  max-width: 800px;
+  max-width: var(--size-content);
   margin: 0 auto;
 }
 
 .antrag-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
   color: var(--color-blue);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
   text-align: center;
 }
 
 .antrag-section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-left: 4px solid var(--color-green);
-  border-radius: 4px;
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  border-left: var(--border-width-strong) solid var(--color-green);
+  border-radius: var(--radius-medium);
 }
 
 .antrag-section h2 {
   color: var(--color-blue);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-4);
 }
 
 .antrag-section p {
-  line-height: 1.6;
-  margin: 0.5rem 0;
+  line-height: var(--line-height-body);
+  margin: var(--space-2) 0;
 }
 
 .antrag-meta {
   color: var(--color-green);
   font-style: italic;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: var(--space-6) !important;
 }
 
 .button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1rem;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
 }
 
 .download-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
   background-color: var(--color-blue);
-  color: white;
-  font-weight: 600;
-  border-radius: 6px;
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-large);
   text-decoration: none;
-  transition: background-color 0.3s;
+  transition: background-color var(--duration-default);
 }
 
 .download-button:hover {
@@ -259,97 +259,97 @@ useHead({
 .download-button--outline {
   background-color: transparent;
   color: var(--color-blue);
-  border: 2px solid var(--color-blue);
+  border: var(--border-width-medium) solid var(--color-blue);
 }
 
 .download-button--outline:hover {
   background-color: var(--color-blue);
-  color: white;
+  color: var(--color-white);
 }
 
 .letter-box {
-  background-color: color-mix(in srgb, var(--color-blue) 5%, transparent);
-  border: 1px solid color-mix(in srgb, var(--color-blue) 20%, transparent);
-  border-radius: 6px;
-  padding: 1.5rem 2rem;
-  margin-top: 1rem;
-  line-height: 1.8;
+  background-color: var(--color-blue-subtle);
+  border: var(--border-width) solid var(--color-blue-border);
+  border-radius: var(--radius-large);
+  padding: var(--space-6) var(--space-8);
+  margin-top: var(--space-4);
+  line-height: var(--line-height-letter);
 }
 
 .letter-header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
 }
 
 .letter-recipient {
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--space-6);
 }
 
 .letter-subject {
-  font-weight: bold;
+  font-weight: var(--font-weight-bold);
   color: var(--color-blue);
-  margin: 1.5rem 0;
-  line-height: 1.4;
+  margin: var(--space-6) 0;
+  line-height: var(--line-height-compact);
 }
 
 .fill-in {
-  border-bottom: 1px solid currentColor;
+  border-bottom: var(--border-width) solid currentColor;
   display: inline-block;
-  min-width: 4rem;
+  min-width: var(--space-16);
 }
 
 .letter-signature {
-  margin-top: 2rem;
+  margin-top: var(--space-8);
   display: flex;
-  gap: 3rem;
+  gap: var(--space-12);
   flex-wrap: wrap;
 }
 
 .signature-line {
   flex: 1;
-  min-width: 160px;
+  min-width: var(--size-signature-min);
 }
 
 .fill-in-long {
   display: block;
-  border-bottom: 1px solid currentColor;
-  height: 2rem;
-  margin-bottom: 0.25rem;
+  border-bottom: var(--border-width) solid currentColor;
+  height: var(--size-signature-line);
+  margin-bottom: var(--space-1);
 }
 
 .signature-label {
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   color: color-mix(in srgb, currentColor 60%, transparent);
 }
 
 .steps-list {
   list-style-type: disc;
-  padding-left: 1.5rem;
-  line-height: 1.8;
+  padding-left: var(--space-6);
+  line-height: var(--line-height-letter);
 }
 
 .steps-list li {
-  margin: 0.5rem 0;
+  margin: var(--space-2) 0;
 }
 
 @media (max-width: 768px) {
   .antrag-container {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 
   .antrag-title {
-    font-size: 1.75rem;
+    font-size: var(--font-size-heading-mobile);
   }
 
   .antrag-section {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 
   .letter-box {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 
   .letter-header {
