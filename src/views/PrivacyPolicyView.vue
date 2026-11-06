@@ -35,7 +35,7 @@ const copyEmailToClipboard = () => {
       <h1 class="privacy-title">Datenschutzerklärung</h1>
       <p class="privacy-date">Stand: 8. Februar 2026</p>
 
-      <section class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section class="privacy-section surface-shadow">
         <h2>Inhaltsübersicht</h2>
         <ul class="index">
           <li><a class="index-link" href="#m3">Verantwortlicher</a></li>
@@ -48,7 +48,7 @@ const copyEmailToClipboard = () => {
         </ul>
       </section>
 
-      <section id="m3" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section id="m3" class="privacy-section surface-shadow">
         <h2>Verantwortlicher</h2>
         <p>
           <strong>IG Lebenswerter Gürtel</strong><br />
@@ -77,7 +77,7 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section id="mOverview" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section id="mOverview" class="privacy-section surface-shadow">
         <h2>Übersicht der Verarbeitungen</h2>
         <p>
           Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen
@@ -109,7 +109,7 @@ const copyEmailToClipboard = () => {
         </ul>
       </section>
 
-      <section id="m2427" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section id="m2427" class="privacy-section surface-shadow">
         <h2>Maßgebliche Rechtsgrundlagen</h2>
         <p>
           <strong>Maßgebliche Rechtsgrundlagen nach der DSGVO: </strong>Im Folgenden erhalten Sie eine Übersicht der
@@ -156,7 +156,7 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section id="m225" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section id="m225" class="privacy-section surface-shadow">
         <h2>Bereitstellung des Onlineangebots und Webhosting</h2>
         <p>
           Wir verarbeiten die Daten der Nutzer, um ihnen unsere Online-Dienste zur Verfügung stellen zu können. Zu
@@ -211,7 +211,7 @@ const copyEmailToClipboard = () => {
         </ul>
       </section>
 
-      <section id="m182" class="privacy-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section id="m182" class="privacy-section surface-shadow">
         <h2>Kontakt- und Anfrageverwaltung</h2>
         <p>
           Bei der Kontaktaufnahme mit uns (z. B. per Post, Kontaktformular, E-Mail, Telefon oder via soziale Medien)
@@ -278,69 +278,69 @@ const copyEmailToClipboard = () => {
 <style scoped>
 .email-obfuscated {
   font-family: monospace;
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-compact);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .privacy-container {
-  min-height: calc(100vh - 200px);
-  padding: 1rem;
+  min-height: calc(var(--size-viewport-min) - var(--size-footer-reserved));
+  padding: var(--space-4);
 }
 
 .privacy-content {
-  max-width: 800px;
+  max-width: var(--size-content);
   margin: 0 auto;
 }
 
 .privacy-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
   color: var(--color-blue);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2);
   text-align: center;
 }
 
 .privacy-date {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
 }
 
 .privacy-section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-left: 4px solid var(--color-green);
-  border-radius: 4px;
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  border-left: var(--border-width-strong) solid var(--color-green);
+  border-radius: var(--radius-medium);
 }
 
 .privacy-section h2 {
   color: var(--color-blue);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-4);
 }
 
 .privacy-section h3 {
   color: var(--color-blue);
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: var(--font-size-subtitle);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-3);
 }
 
 .privacy-section p {
-  line-height: 1.6;
-  margin: 0.5rem 0;
+  line-height: var(--line-height-body);
+  margin: var(--space-2) 0;
 }
 
 .privacy-section ul {
-  margin: 0.5rem 0;
-  padding-left: 1.5rem;
+  margin: var(--space-2) 0;
+  padding-left: var(--space-6);
 }
 
 .privacy-section li {
-  margin: 0.5rem 0;
-  line-height: 1.6;
+  margin: var(--space-2) 0;
+  line-height: var(--line-height-body);
 }
 
 .index {
@@ -358,28 +358,28 @@ const copyEmailToClipboard = () => {
 }
 
 .m-elements {
-  margin: 1rem 0;
+  margin: var(--space-4) 0;
 }
 
 .seal {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: var(--border-width) solid var(--color-border);
   text-align: center;
-  font-size: 0.9rem;
+  font-size: var(--font-size-md);
 }
 
 @media (max-width: 768px) {
   .privacy-container {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 
   .privacy-title {
-    font-size: 1.75rem;
+    font-size: var(--font-size-heading-mobile);
   }
 
   .privacy-section {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 }
 </style>

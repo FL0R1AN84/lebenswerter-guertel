@@ -1,6 +1,6 @@
 {
   "require": {
-    "vlucas/phpdotenv": "5.7.0"
+    "vlucas/phpdotenv": "5.8.0"
   },
   "config": {
     "vendor-dir": "vendor"

@@ -37,7 +37,7 @@ useHead({
   <HeaderNavigation />
   <main>
     <div class="flex flex-col items-center justify-center bg-linear-to-br from-(--color-blue) to-(--color-green)">
-      <h2 class="text-2xl md:text-4xl font-bold text-white py-8 px-2 lg:px-0 text-center">
+      <h2 class="text-2xl md:text-4xl font-bold text-(--color-white) py-8 px-2 lg:px-0 text-center">
         Die Luxemburger ist wieder lebenswert.
       </h2>
       <img
@@ -45,7 +45,7 @@ useHead({
         class="w-full max-w-295 px-4 lg:px-0"
         src="/IGLux_Kinowerbung.webp"
       />
-      <h3 class="text-2xl md:text-4xl font-bold text-white py-8 px-2 lg:px-0 text-center">
+      <h3 class="text-2xl md:text-4xl font-bold text-(--color-white) py-8 px-2 lg:px-0 text-center">
         Jetzt machen wir den Gürtel wieder lebenswert!
       </h3>
       <a
@@ -114,10 +114,10 @@ useHead({
         <span class="text-3xl md:text-4xl leading-tight"> gute Gründe<br />für Tempo 30 </span>
       </h1>
       <section class="w-full max-w-295 flex flex-col items-center px-2 lg:px-0">
-        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+        <section class="home-section surface-shadow">
           <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
-              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-(--color-white) text-3xl sm:text-4xl font-bold shrink-0"
               >1</span
             >
             <span class="text-xl sm:text-2xl leading-tight">
@@ -136,10 +136,10 @@ useHead({
             >Eine Lärmreduktion an der Luxemburger Straße ist durch Tempo 30 schnell und günstig möglich.
           </p>
         </section>
-        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+        <section class="home-section surface-shadow">
           <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
-              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-(--color-white) text-3xl sm:text-4xl font-bold shrink-0"
               >2</span
             >
             <span class="text-xl sm:text-2xl leading-tight">
@@ -158,10 +158,10 @@ useHead({
             >
           </p>
         </section>
-        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+        <section class="home-section surface-shadow">
           <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
-              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-(--color-white) text-3xl sm:text-4xl font-bold shrink-0"
               >3</span
             >
             <span class="text-xl sm:text-2xl leading-tight">
@@ -174,10 +174,10 @@ useHead({
             src="/04.webp"
           />
         </section>
-        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+        <section class="home-section surface-shadow">
           <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
-              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-(--color-white) text-3xl sm:text-4xl font-bold shrink-0"
               >4</span
             >
             <span class="text-xl sm:text-2xl leading-tight">
@@ -196,10 +196,10 @@ useHead({
             src="/04.webp"
           />
         </section>
-        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+        <section class="home-section surface-shadow">
           <h2 class="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-(--color-pink) py-4">
             <span
-              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-white text-3xl sm:text-4xl font-bold shrink-0"
+              class="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-(--color-pink) text-(--color-white) text-3xl sm:text-4xl font-bold shrink-0"
               >5</span
             >
             <span class="text-xl sm:text-2xl leading-tight">
@@ -222,7 +222,7 @@ useHead({
             src="/05.webp"
           />
         </section>
-        <section class="home-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+        <section class="home-section surface-shadow">
           <h2 class="text-2xl font-bold text-(--color-pink) py-4 pl-2 lg:pl-0">Quellen:</h2>
           <p>
             <span class="text-(--color-pink) font-bold">1</span> European Environment Agency (EEA)
@@ -290,73 +290,73 @@ useHead({
 <style scoped>
 .donate-button {
   display: inline-block;
-  margin-bottom: 2.5rem;
-  padding: 0.85rem 2rem;
+  margin-bottom: var(--space-10);
+  padding: var(--space-large-compact) var(--space-8);
   background-color: var(--color-pink);
-  color: white;
-  font-weight: 700;
-  font-size: 1.15rem;
-  border-radius: 999px;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-cta);
+  border-radius: var(--radius-pill);
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-donate);
   transition:
-    background-color 0.2s,
-    transform 0.2s;
+    background-color var(--duration-fast),
+    transform var(--duration-fast);
 }
 
 .donate-button:hover {
-  background-color: white;
+  background-color: var(--color-white);
   color: var(--color-pink);
   transform: scale(1.04);
 }
 
 .cta-banner {
-  background-color: color-mix(in srgb, var(--color-green) 12%, transparent);
-  border-top: 3px solid var(--color-green);
-  border-bottom: 3px solid var(--color-green);
-  padding: 2rem 1.5rem;
+  background-color: var(--color-green-soft);
+  border-top: var(--border-width-accent) solid var(--color-green);
+  border-bottom: var(--border-width-accent) solid var(--color-green);
+  padding: var(--space-8) var(--space-6);
 }
 
 .cta-banner__inner {
-  max-width: 74rem; /* max-w-295 equivalent */
+  max-width: var(--size-home-content);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: var(--space-6);
 }
 
 .cta-banner__text {
   flex: 1;
-  min-width: 200px;
+  min-width: var(--size-action-min);
 }
 
 .cta-banner__title {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
   color: var(--color-blue);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--space-2);
 }
 
 .cta-banner__body {
-  line-height: 1.6;
+  line-height: var(--line-height-body);
   color: inherit;
 }
 
 .cta-banner__button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.75rem;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-button-inline);
   background-color: var(--color-green);
-  color: white;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border-radius: 6px;
+  color: var(--color-white);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-body-lg);
+  border-radius: var(--radius-large);
   text-decoration: none;
   white-space: nowrap;
-  transition: background-color 0.3s;
+  transition: background-color var(--duration-default);
 }
 
 .cta-banner__button:hover {
@@ -364,24 +364,24 @@ useHead({
 }
 
 .cta-note {
-  background-color: color-mix(in srgb, var(--color-blue) 6%, transparent);
-  border-bottom: 2px solid color-mix(in srgb, var(--color-blue) 20%, transparent);
-  padding: 0.875rem 1.5rem;
+  background-color: var(--color-blue-soft);
+  border-bottom: var(--border-width-medium) solid var(--color-blue-border);
+  padding: var(--space-small-offset) var(--space-6);
   text-align: center;
 }
 
 .cta-note__inner {
-  max-width: 74rem;
+  max-width: var(--size-home-content);
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: var(--line-height-body);
 }
 
 .cta-note__link {
   display: inline-flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: var(--space-compact);
   color: var(--color-blue);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
   vertical-align: bottom;
 }
@@ -391,19 +391,19 @@ useHead({
 }
 
 .home-section {
-  margin-top: 2rem;
-  padding: 1.5rem;
-  border-left: 4px solid var(--color-blue);
-  border-radius: 4px;
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  border-left: var(--border-width-strong) solid var(--color-blue);
+  border-radius: var(--radius-medium);
 }
 
 .home-section img {
-  border-radius: 4px;
+  border-radius: var(--radius-medium);
 }
 
 .home-section p {
-  line-height: 1.6;
-  margin: 1rem 0;
+  line-height: var(--line-height-body);
+  margin: var(--space-4) 0;
   word-break: break-word;
   overflow-wrap: break-word;
 }

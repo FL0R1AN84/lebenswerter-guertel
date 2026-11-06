@@ -24,22 +24,22 @@ defineProps<{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: clamp(60px, 15vw, 100px);
-  height: clamp(60px, 15vw, 100px);
-  transition: all 0.3s ease;
+  width: var(--size-heart);
+  height: var(--size-heart);
+  transition: all var(--duration-default) var(--ease-standard);
 }
 
 /* noinspection CssUnusedSymbol */
 .heart-container--small {
-  width: clamp(40px, 10vw, 60px);
-  height: clamp(40px, 10vw, 60px);
+  width: var(--size-heart-small);
+  height: var(--size-heart-small);
 }
 
 .heart {
   width: 100%;
   height: 100%;
   color: var(--color-pink);
-  animation: heartbeat 1.2s ease-in-out infinite;
+  animation: heartbeat var(--duration-heartbeat) var(--ease-in-out) infinite;
 }
 
 @keyframes heartbeat {

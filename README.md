@@ -42,6 +42,15 @@ A modern, single-page web application built with Vue 3 and TypeScript, serving a
 
 ---
 
+## Design Tokens
+
+Shared colors, spacing, typography, dimensions, borders, and shadows are defined in
+`src/assets/variables.css`. Use these CSS custom properties in component styles instead of repeating literal values.
+The light and dark semantic colors are selected centrally; Tailwind utility classes continue to use Tailwind's theme
+tokens.
+
+---
+
 ## Project Structure
 
 ```
@@ -107,7 +116,7 @@ Minimal template to get started:
 ```vue
 
 <template>
-  <article class="news-card shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+  <article class="news-card surface-shadow">
     <header class="news-card__header">
       <span class="news-card__date">
         <time datetime="2026-MM-DD">DD. Month 2026</time>
@@ -250,4 +259,3 @@ Before any pull request can be automerged, the following GitHub Actions workflow
   `develop`.
 
 This guarantees that no dependency update is merged unless all tests pass and the project builds successfully.
-

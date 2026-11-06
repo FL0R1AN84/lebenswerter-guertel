@@ -42,26 +42,26 @@ const version = packageJson.version
 
 <style scoped>
 .footer {
-  padding: 1rem;
+  padding: var(--space-4);
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-4);
 }
 
 .footer-content {
-  max-width: 1200px;
+  max-width: var(--size-wide-content);
   margin: 0 auto;
 }
 
 .footer-instagram {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: var(--space-icon-gap);
   color: var(--color-green);
   text-decoration: none;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  transition: color 0.3s;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-3);
+  transition: color var(--duration-default);
 }
 
 .footer-instagram:hover {
@@ -69,28 +69,28 @@ const version = packageJson.version
 }
 
 .footer-instagram:focus {
-  outline: 2px solid var(--color-blue);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline: var(--border-width-medium) solid var(--color-blue);
+  outline-offset: var(--space-1);
+  border-radius: var(--radius-small);
 }
 
 .footer-instagram-icon {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: var(--size-icon-small);
+  height: var(--size-icon-small);
   flex-shrink: 0;
 }
 
 .footer-nav {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: var(--space-4);
 }
 
 .footer-link {
   color: var(--color-green);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
+  font-weight: var(--font-weight-semibold);
+  transition: color var(--duration-default);
 }
 
 .footer-link:hover {
@@ -98,13 +98,13 @@ const version = packageJson.version
 }
 
 .footer-link:focus {
-  outline: 2px solid var(--color-blue);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline: var(--border-width-medium) solid var(--color-blue);
+  outline-offset: var(--space-1);
+  border-radius: var(--radius-small);
 }
 
 .footer-version {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
+  margin-top: var(--space-2);
+  font-size: var(--font-size-sm);
 }
 </style>

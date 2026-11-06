@@ -165,7 +165,7 @@ npm run type-check            # vue-tsc --build (called in build)
 - `NewsView.vue` imports and registers posts manually, ordered newest first per year-group
 - News card template (from README):
   ```vue
-  <article class="news-card shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+  <article class="news-card surface-shadow">
     <header class="news-card__header">
       <span class="news-card__date"><time>...</time></span>
       <span class="news-card__tag">Press Release</span>

@@ -1,5 +1,5 @@
 <template>
-  <article class="news-card shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+  <article class="news-card surface-shadow">
     <header class="news-card__header">
       <span class="news-card__date">
         <time datetime="2026-05-07">03. Mai 2026</time>
@@ -44,56 +44,56 @@
 
 <style scoped>
 .news-card {
-  padding: 1.5rem;
-  border-left: 4px solid var(--color-blue);
-  border-radius: 4px;
-  margin-bottom: 2rem;
+  padding: var(--space-6);
+  border-left: var(--border-width-strong) solid var(--color-blue);
+  border-radius: var(--radius-medium);
+  margin-bottom: var(--space-8);
 }
 
 .news-card__header {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.5rem;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .news-card__date {
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
   color: var(--color-blue);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
 }
 
 .news-card__tag {
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: var(--font-size-2xs);
+  font-weight: var(--font-weight-bold);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: var(--letter-spacing-tag);
   background-color: var(--color-pink);
-  color: white;
-  padding: 0.15rem 0.6rem;
-  border-radius: 999px;
+  color: var(--color-white);
+  padding: var(--space-tight) var(--space-tag-inline);
+  border-radius: var(--radius-pill);
 }
 
 .news-card__title {
-  font-size: 1.35rem;
-  font-weight: 700;
+  font-size: var(--font-size-news-title);
+  font-weight: var(--font-weight-bold);
   color: var(--color-blue);
-  margin-bottom: 1.25rem;
-  line-height: 1.3;
+  margin-bottom: var(--space-5);
+  line-height: var(--line-height-title);
 }
 
 .news-card__body p {
-  line-height: 1.7;
-  margin: 0.75rem 0;
+  line-height: var(--line-height-relaxed);
+  margin: var(--space-3) 0;
 }
 
 .news-card__link {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  margin-top: 0.75rem;
+  gap: var(--space-icon-gap);
+  margin-top: var(--space-3);
   color: var(--color-blue);
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   text-decoration: none;
 }
 
@@ -102,8 +102,8 @@
 }
 
 .news-card__link-icon {
-  width: 1rem;
-  height: 1rem;
+  width: var(--size-icon);
+  height: var(--size-icon);
   flex-shrink: 0;
 }
 </style>

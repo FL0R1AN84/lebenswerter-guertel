@@ -54,7 +54,7 @@ const copyEmailToClipboard = () => {
     <section class="imprint-content">
       <h1 class="imprint-title">Impressum & Kontakt</h1>
 
-      <section class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section class="imprint-section surface-shadow">
         <h2>Verantwortlich</h2>
         <p>
           <strong>IG Lebenswerter Gürtel</strong><br />
@@ -64,7 +64,7 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section id="kontakt" class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section id="kontakt" class="imprint-section surface-shadow">
         <h2>Kontakt</h2>
         <p>
           E-Mail:
@@ -88,7 +88,7 @@ const copyEmailToClipboard = () => {
         </p>
       </section>
 
-      <section ref="contactSectionRef" class="imprint-section shadow-md dark:shadow-md dark:shadow-neutral-800/50">
+      <section ref="contactSectionRef" class="imprint-section surface-shadow">
         <h2>Kontaktformular</h2>
         <p>Oder nutzen Sie das folgende Kontaktformular:</p>
         <ContactForm @scroll-to-section="scrollToContactSection" />
@@ -99,61 +99,61 @@ const copyEmailToClipboard = () => {
 
 <style scoped>
 .imprint-container {
-  min-height: calc(100vh - 200px);
-  padding: 1rem;
+  min-height: calc(var(--size-viewport-min) - var(--size-footer-reserved));
+  padding: var(--space-4);
 }
 
 .imprint-content {
-  max-width: 800px;
+  max-width: var(--size-content);
   margin: 0 auto;
 }
 
 .imprint-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: var(--font-size-display);
+  font-weight: var(--font-weight-bold);
   color: var(--color-blue);
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-8);
   text-align: center;
 }
 
 .imprint-section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-left: 4px solid var(--color-green);
-  border-radius: 4px;
+  margin-bottom: var(--space-8);
+  padding: var(--space-6);
+  border-left: var(--border-width-strong) solid var(--color-green);
+  border-radius: var(--radius-medium);
 }
 
 .imprint-section h2 {
   color: var(--color-blue);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-4);
 }
 
 .imprint-section p {
-  line-height: 1.6;
-  margin: 0.5rem 0;
+  line-height: var(--line-height-body);
+  margin: var(--space-2) 0;
 }
 
 .email-obfuscated {
   font-family: monospace;
-  padding: 0.25rem 0.5rem;
-  border-radius: 3px;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-compact);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 @media (max-width: 768px) {
   .imprint-container {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 
   .imprint-title {
-    font-size: 1.75rem;
+    font-size: var(--font-size-heading-mobile);
   }
 
   .imprint-section {
-    padding: 1rem;
+    padding: var(--space-4);
   }
 }
 </style>
